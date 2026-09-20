@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   
   <!-- CSS Stylesheet -->
-  <link rel="stylesheet" href="style.css?v=20260920_v10" />
+  <link rel="stylesheet" href="style.css?v=20260920_v11" />
 </head>
 <body>
 
@@ -478,23 +478,15 @@
         <div class="player-series-title" id="playerSeriesTitle">Carregando...</div>
         <div class="player-ep-name" id="playerEpName">Capítulo 01</div>
       </div>
-      <div style="display: flex; align-items: center; gap: 8px;">
+      <div>
         <button class="vip-pill-btn" onclick="openPixModal()" style="font-size:0.75rem; padding:6px 14px;">
           👑 VIP R$ 19,90
-        </button>
-        <button class="btn-topbar-close-icon" onclick="closePlayerModal()" title="Fechar Player" aria-label="Fechar">
-          ✕
         </button>
       </div>
     </div>
 
     <!-- Área de Vídeo Camuflada -->
     <div class="video-stealth-wrapper" id="videoStealthWrapper">
-      <!-- Botão Fechar Flutuante Sempre Visível no Player e na Tela Cheia -->
-      <button class="btn-player-close-floating" id="btnPlayerCloseFloating" onclick="closePlayerModal()" title="Fechar Vídeo e Voltar" aria-label="Fechar Vídeo">
-        ✕
-      </button>
-
       <!-- Preloader Cinema Stealth (Cobre o início do YouTube) -->
       <div class="player-preloader" id="playerPreloader">
         <div class="stealth-spinner"></div>
@@ -584,8 +576,8 @@
         <button class="btn-unlock-paywall" onclick="openPixModal()">
           <span>🔓</span> LIBERAR NO SITE VIA PIX (R$ 19,90)
         </button>
-        <button class="btn-unlock-chat" onclick="hidePaywall(); openDonaSirleneChat('Oi Dona Sirlene! Quero tirar uma dúvida e liberar o meu acesso VIP!');" style="width: 100%; background: linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%); border: none; color: #fff; font-weight: 800; font-size: 0.88rem; padding: 12px; border-radius: 12px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 8px; box-shadow: 0 4px 15px rgba(236, 72, 153, 0.4);">
-          💬 FALAR COM DONA SIRLENE NO CHAT (LIBERAR VIP)
+        <button class="btn-unlock-chat" onclick="hidePaywall(); openWhatsAppFallback('Oi Dona Sirlene! Estou assistindo novela no site e quero liberar meu Acesso VIP de R$ 19,90!');" style="width: 100%; background: linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%); border: none; color: #fff; font-weight: 800; font-size: 0.88rem; padding: 13px; border-radius: 12px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 8px; box-shadow: 0 4px 15px rgba(236, 72, 153, 0.4);">
+          💬 FALAR COM DONA SIRLENE NO WHATSAPP (LIBERAR VIP)
         </button>
         <button class="btn-unlock-whatsapp" onclick="payViaWhatsApp()">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -739,8 +731,8 @@
   <!-- YouTube IFrame API Script -->
   <script src="https://www.youtube.com/iframe_api"></script>
   
-  <script src="catalog.js?v=20260920_v10"></script>
-  <script src="app.js?v=20260920_v10"></script>
-  <script src="chat-agent.js?v=20260920_v10"></script>
+  <script src="catalog.js?v=20260920_v11"></script>
+  <script src="app.js?v=20260920_v11"></script>
+  <script src="chat-agent.js?v=20260920_v11"></script>
 </body>
 </html>
