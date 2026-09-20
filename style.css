@@ -363,6 +363,9 @@ html, body {
   border: 1px solid rgba(255, 255, 255, 0.08);
   cursor: pointer;
   background: #09090f;
+  touch-action: pan-y;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 .hero-img {
@@ -1005,9 +1008,20 @@ html, body {
   .hero-title { font-size: 1.25rem; margin-bottom: 6px; }
   .hero-desc { font-size: 0.8rem; -webkit-line-clamp: 2; margin-bottom: 12px; }
   .btn-play-hero { padding: 9px 16px; font-size: 0.82rem; }
-  .btn-fav-hero { font-size: 0.78rem; padding: 9px 12px; }
-  .hero-nav-arrow { display: none; }
-  .hero-dots { bottom: 12px; right: 14px; }
+  .hero-nav-arrow {
+    display: flex !important;
+    width: 32px;
+    height: 32px;
+    font-size: 1.15rem;
+    background: rgba(10, 10, 16, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 15;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+  }
+  .hero-nav-arrow.prev { left: 8px; }
+  .hero-nav-arrow.next { right: 8px; }
 
   .home-quick-categories {
     grid-template-columns: repeat(2, 1fr);
