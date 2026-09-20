@@ -32,7 +32,8 @@ const HERO_SLIDES = [
     glowColor: 'rgba(239, 68, 68, 0.45)',
     title: 'Pássaro Madrugador (Erkenci Kuş) — Completa Dublada',
     desc: 'O maior fenômeno das novelas turcas! A paixão proibida e divertida entre Sanem e Can Divit em Istambul, 100% dublado em alta definição.',
-    cover: 'https://i.ytimg.com/vi/JHd1bRSSm-I/hqdefault.jpg',
+    cover: 'covers/turca-1.jpg',
+    fallbackCover: 'https://i.ytimg.com/vi/JHd1bRSSm-I/hqdefault.jpg',
     btnText: 'Assistir Temporada 1'
   },
   {
@@ -43,7 +44,8 @@ const HERO_SLIDES = [
     glowColor: 'rgba(236, 72, 153, 0.45)',
     title: 'Pousando no Amor (Crash Landing on You)',
     desc: 'O dorama mais premiado e amado do mundo! O romance arrebatador entre Yoon Se-ri e o capitão Ri Jeong-hyeok dublado em Full HD.',
-    cover: 'https://i.ytimg.com/vi/f954W8xAUhU/hqdefault.jpg',
+    cover: 'covers/dorama-1.jpg',
+    fallbackCover: 'https://i.ytimg.com/vi/f954W8xAUhU/hqdefault.jpg',
     btnText: 'Assistir Capítulo 1 Grátis'
   },
   {
@@ -54,7 +56,8 @@ const HERO_SLIDES = [
     glowColor: 'rgba(16, 185, 129, 0.45)',
     title: 'A Usurpadora — Paola Bracho e Paulina Martins',
     desc: 'A vilã mais icônica da história da teledramaturgia! A troca de identidade entre as gêmeas que parou o Brasil, com imagem remasterizada.',
-    cover: 'https://i.ytimg.com/vi/95_a4Mv94_E/hqdefault.jpg',
+    cover: 'covers/mexicana-1.jpg',
+    fallbackCover: 'https://i.ytimg.com/vi/t9Zmqx6Wr7E/hqdefault.jpg',
     btnText: 'Assistir Capítulo 1 Grátis'
   },
   {
@@ -65,7 +68,8 @@ const HERO_SLIDES = [
     glowColor: 'rgba(239, 68, 68, 0.45)',
     title: 'Será Isso Amor? (Sen Çal Kapımı) — Dublada',
     desc: 'O romance irresistível entre Eda Yildiz e Serkan Bolat que explodiu no mundo inteiro. Todos os episódios completos sem cortes.',
-    cover: 'https://i.ytimg.com/vi/TxVvnCRmUUs/hqdefault.jpg',
+    cover: 'covers/turca-4.jpg',
+    fallbackCover: 'https://i.ytimg.com/vi/TxVvnCRmUUs/hqdefault.jpg',
     btnText: 'Assistir Agora'
   }
 ];
@@ -563,7 +567,10 @@ function switchHeroSlide(idx) {
     }
     if (img) {
       img.src = slide.cover;
-      img.onerror = () => { img.src = 'https://i.ytimg.com/vi/IPeKoGSaAqY/hqdefault.jpg'; };
+      img.onerror = () => {
+        img.onerror = null;
+        img.src = slide.fallbackCover || 'covers/turca-1.jpg';
+      };
     }
     if (badge) {
       badge.textContent = slide.badgeText;
