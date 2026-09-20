@@ -1,16 +1,1675 @@
 // ═══════════════════════════════════════════════════════════════════════════
-// CATALOG.JS — PLATAFORMA STREAMING NOVELINHAS VIP
-// 222 Séries Completas • Múltiplas Temporadas • 5.864 Capítulos
+// CATALOG.JS — PLATAFORMA STREAMING NOVELINHAS VIP (NICHO NOVELAS EXCLUSIVO)
+// 222 Novelas Completas • 5.944 Capítulos
 // ═══════════════════════════════════════════════════════════════════════════
 
 const NOVELAS_CATALOG = [
+  {
+    "id": "turca-forca-de-mulher",
+    "title": "Força de Mulher (Kadın) — A História de Bahar Dublada",
+    "channelName": "Dramax Novelas Turcas",
+    "channelUrl": "https://www.youtube.com",
+    "category": "turcas",
+    "categoryLabel": "Novela Turca Dublada",
+    "badge": "SUCESSO DA TV 🇹🇷",
+    "isTrending": true,
+    "rating": "5.0",
+    "views": "6.8M",
+    "likes": "290K",
+    "episodesCount": 100,
+    "seasonsCount": 3,
+    "synopsis": "A emocionante jornada de Bahar, uma mãe dedicada que luta com unhas e dentes para proteger seus filhos após o desaparecimento do marido. A novela turca mais assistida e aclamada da televisão!",
+    "cover": "covers/turca-2.jpg",
+    "banner": "covers/turca-2.jpg",
+    "year": 2023,
+    "audio": "Dublado em Português (Brasil)",
+    "ageRating": "12",
+    "genres": [
+      "Novela Turca",
+      "Drama Emocionante",
+      "Superação Familiar",
+      "Dublado"
+    ],
+    "tags": [
+      "Força de Mulher",
+      "Kadin",
+      "Bahar",
+      "Novela Turca",
+      "Dublado"
+    ],
+    "seasons": [
+      {
+        "num": 1,
+        "label": "Temporada 1: A Força de Mãe",
+        "episodes": [
+          {
+            "num": 1,
+            "season": 1,
+            "title": "Capítulo 01: O Desafio de Bahar",
+            "duration": "48:30",
+            "videoId": "f954W8xAUhU",
+            "isFree": true
+          },
+          {
+            "num": 2,
+            "season": 1,
+            "title": "Capítulo 02: O Desafio de Bahar",
+            "duration": "48:30",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 3,
+            "season": 1,
+            "title": "Capítulo 03: O Desafio de Bahar",
+            "duration": "48:30",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 4,
+            "season": 1,
+            "title": "Capítulo 04: O Desafio de Bahar",
+            "duration": "48:30",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 5,
+            "season": 1,
+            "title": "Capítulo 05: O Desafio de Bahar",
+            "duration": "48:30",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 6,
+            "season": 1,
+            "title": "Capítulo 06: O Desafio de Bahar",
+            "duration": "48:30",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 7,
+            "season": 1,
+            "title": "Capítulo 07: O Desafio de Bahar",
+            "duration": "48:30",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 8,
+            "season": 1,
+            "title": "Capítulo 08: O Desafio de Bahar",
+            "duration": "48:30",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 9,
+            "season": 1,
+            "title": "Capítulo 09: O Desafio de Bahar",
+            "duration": "48:30",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 10,
+            "season": 1,
+            "title": "Capítulo 10: O Desafio de Bahar",
+            "duration": "48:30",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 11,
+            "season": 1,
+            "title": "Capítulo 11: O Desafio de Bahar",
+            "duration": "48:30",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 12,
+            "season": 1,
+            "title": "Capítulo 12: O Desafio de Bahar",
+            "duration": "48:30",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 13,
+            "season": 1,
+            "title": "Capítulo 13: O Desafio de Bahar",
+            "duration": "48:30",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 14,
+            "season": 1,
+            "title": "Capítulo 14: O Desafio de Bahar",
+            "duration": "48:30",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 15,
+            "season": 1,
+            "title": "Capítulo 15: O Desafio de Bahar",
+            "duration": "48:30",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 16,
+            "season": 1,
+            "title": "Capítulo 16: O Desafio de Bahar",
+            "duration": "48:30",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 17,
+            "season": 1,
+            "title": "Capítulo 17: O Desafio de Bahar",
+            "duration": "48:30",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 18,
+            "season": 1,
+            "title": "Capítulo 18: O Desafio de Bahar",
+            "duration": "48:30",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 19,
+            "season": 1,
+            "title": "Capítulo 19: O Desafio de Bahar",
+            "duration": "48:30",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 20,
+            "season": 1,
+            "title": "Capítulo 20: O Desafio de Bahar",
+            "duration": "48:30",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 21,
+            "season": 1,
+            "title": "Capítulo 21: O Desafio de Bahar",
+            "duration": "48:30",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 22,
+            "season": 1,
+            "title": "Capítulo 22: O Desafio de Bahar",
+            "duration": "48:30",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 23,
+            "season": 1,
+            "title": "Capítulo 23: O Desafio de Bahar",
+            "duration": "48:30",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 24,
+            "season": 1,
+            "title": "Capítulo 24: O Desafio de Bahar",
+            "duration": "48:30",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 25,
+            "season": 1,
+            "title": "Capítulo 25: O Desafio de Bahar",
+            "duration": "48:30",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 26,
+            "season": 1,
+            "title": "Capítulo 26: O Desafio de Bahar",
+            "duration": "48:30",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 27,
+            "season": 1,
+            "title": "Capítulo 27: O Desafio de Bahar",
+            "duration": "48:30",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 28,
+            "season": 1,
+            "title": "Capítulo 28: O Desafio de Bahar",
+            "duration": "48:30",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 29,
+            "season": 1,
+            "title": "Capítulo 29: O Desafio de Bahar",
+            "duration": "48:30",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 30,
+            "season": 1,
+            "title": "Capítulo 30: O Desafio de Bahar",
+            "duration": "48:30",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 31,
+            "season": 1,
+            "title": "Capítulo 31: O Desafio de Bahar",
+            "duration": "48:30",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 32,
+            "season": 1,
+            "title": "Capítulo 32: O Desafio de Bahar",
+            "duration": "48:30",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 33,
+            "season": 1,
+            "title": "Capítulo 33: O Desafio de Bahar",
+            "duration": "48:30",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 34,
+            "season": 1,
+            "title": "Capítulo 34: O Desafio de Bahar",
+            "duration": "48:30",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 35,
+            "season": 1,
+            "title": "Capítulo 35: O Desafio de Bahar",
+            "duration": "48:30",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          }
+        ],
+        "startIndex": 0
+      },
+      {
+        "num": 2,
+        "label": "Temporada 2: O Reencontro Inesperado",
+        "episodes": [
+          {
+            "num": 36,
+            "season": 2,
+            "title": "Capítulo 36: Segredos do Passado",
+            "duration": "49:15",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 37,
+            "season": 2,
+            "title": "Capítulo 37: Segredos do Passado",
+            "duration": "49:15",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 38,
+            "season": 2,
+            "title": "Capítulo 38: Segredos do Passado",
+            "duration": "49:15",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 39,
+            "season": 2,
+            "title": "Capítulo 39: Segredos do Passado",
+            "duration": "49:15",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 40,
+            "season": 2,
+            "title": "Capítulo 40: Segredos do Passado",
+            "duration": "49:15",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 41,
+            "season": 2,
+            "title": "Capítulo 41: Segredos do Passado",
+            "duration": "49:15",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 42,
+            "season": 2,
+            "title": "Capítulo 42: Segredos do Passado",
+            "duration": "49:15",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 43,
+            "season": 2,
+            "title": "Capítulo 43: Segredos do Passado",
+            "duration": "49:15",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 44,
+            "season": 2,
+            "title": "Capítulo 44: Segredos do Passado",
+            "duration": "49:15",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 45,
+            "season": 2,
+            "title": "Capítulo 45: Segredos do Passado",
+            "duration": "49:15",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 46,
+            "season": 2,
+            "title": "Capítulo 46: Segredos do Passado",
+            "duration": "49:15",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 47,
+            "season": 2,
+            "title": "Capítulo 47: Segredos do Passado",
+            "duration": "49:15",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 48,
+            "season": 2,
+            "title": "Capítulo 48: Segredos do Passado",
+            "duration": "49:15",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 49,
+            "season": 2,
+            "title": "Capítulo 49: Segredos do Passado",
+            "duration": "49:15",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 50,
+            "season": 2,
+            "title": "Capítulo 50: Segredos do Passado",
+            "duration": "49:15",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 51,
+            "season": 2,
+            "title": "Capítulo 51: Segredos do Passado",
+            "duration": "49:15",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 52,
+            "season": 2,
+            "title": "Capítulo 52: Segredos do Passado",
+            "duration": "49:15",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 53,
+            "season": 2,
+            "title": "Capítulo 53: Segredos do Passado",
+            "duration": "49:15",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 54,
+            "season": 2,
+            "title": "Capítulo 54: Segredos do Passado",
+            "duration": "49:15",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 55,
+            "season": 2,
+            "title": "Capítulo 55: Segredos do Passado",
+            "duration": "49:15",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 56,
+            "season": 2,
+            "title": "Capítulo 56: Segredos do Passado",
+            "duration": "49:15",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 57,
+            "season": 2,
+            "title": "Capítulo 57: Segredos do Passado",
+            "duration": "49:15",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 58,
+            "season": 2,
+            "title": "Capítulo 58: Segredos do Passado",
+            "duration": "49:15",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 59,
+            "season": 2,
+            "title": "Capítulo 59: Segredos do Passado",
+            "duration": "49:15",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 60,
+            "season": 2,
+            "title": "Capítulo 60: Segredos do Passado",
+            "duration": "49:15",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 61,
+            "season": 2,
+            "title": "Capítulo 61: Segredos do Passado",
+            "duration": "49:15",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 62,
+            "season": 2,
+            "title": "Capítulo 62: Segredos do Passado",
+            "duration": "49:15",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 63,
+            "season": 2,
+            "title": "Capítulo 63: Segredos do Passado",
+            "duration": "49:15",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 64,
+            "season": 2,
+            "title": "Capítulo 64: Segredos do Passado",
+            "duration": "49:15",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 65,
+            "season": 2,
+            "title": "Capítulo 65: Segredos do Passado",
+            "duration": "49:15",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 66,
+            "season": 2,
+            "title": "Capítulo 66: Segredos do Passado",
+            "duration": "49:15",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 67,
+            "season": 2,
+            "title": "Capítulo 67: Segredos do Passado",
+            "duration": "49:15",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 68,
+            "season": 2,
+            "title": "Capítulo 68: Segredos do Passado",
+            "duration": "49:15",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 69,
+            "season": 2,
+            "title": "Capítulo 69: Segredos do Passado",
+            "duration": "49:15",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 70,
+            "season": 2,
+            "title": "Capítulo 70: Segredos do Passado",
+            "duration": "49:15",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          }
+        ],
+        "startIndex": 35
+      },
+      {
+        "num": 3,
+        "label": "Temporada 3: A Vitória do Amor",
+        "episodes": [
+          {
+            "num": 71,
+            "season": 3,
+            "title": "Capítulo 71: A Grande Vitória",
+            "duration": "47:50",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 72,
+            "season": 3,
+            "title": "Capítulo 72: A Grande Vitória",
+            "duration": "47:50",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 73,
+            "season": 3,
+            "title": "Capítulo 73: A Grande Vitória",
+            "duration": "47:50",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 74,
+            "season": 3,
+            "title": "Capítulo 74: A Grande Vitória",
+            "duration": "47:50",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 75,
+            "season": 3,
+            "title": "Capítulo 75: A Grande Vitória",
+            "duration": "47:50",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 76,
+            "season": 3,
+            "title": "Capítulo 76: A Grande Vitória",
+            "duration": "47:50",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 77,
+            "season": 3,
+            "title": "Capítulo 77: A Grande Vitória",
+            "duration": "47:50",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 78,
+            "season": 3,
+            "title": "Capítulo 78: A Grande Vitória",
+            "duration": "47:50",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 79,
+            "season": 3,
+            "title": "Capítulo 79: A Grande Vitória",
+            "duration": "47:50",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 80,
+            "season": 3,
+            "title": "Capítulo 80: A Grande Vitória",
+            "duration": "47:50",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 81,
+            "season": 3,
+            "title": "Capítulo 81: A Grande Vitória",
+            "duration": "47:50",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 82,
+            "season": 3,
+            "title": "Capítulo 82: A Grande Vitória",
+            "duration": "47:50",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 83,
+            "season": 3,
+            "title": "Capítulo 83: A Grande Vitória",
+            "duration": "47:50",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 84,
+            "season": 3,
+            "title": "Capítulo 84: A Grande Vitória",
+            "duration": "47:50",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 85,
+            "season": 3,
+            "title": "Capítulo 85: A Grande Vitória",
+            "duration": "47:50",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 86,
+            "season": 3,
+            "title": "Capítulo 86: A Grande Vitória",
+            "duration": "47:50",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 87,
+            "season": 3,
+            "title": "Capítulo 87: A Grande Vitória",
+            "duration": "47:50",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 88,
+            "season": 3,
+            "title": "Capítulo 88: A Grande Vitória",
+            "duration": "47:50",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 89,
+            "season": 3,
+            "title": "Capítulo 89: A Grande Vitória",
+            "duration": "47:50",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 90,
+            "season": 3,
+            "title": "Capítulo 90: A Grande Vitória",
+            "duration": "47:50",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 91,
+            "season": 3,
+            "title": "Capítulo 91: A Grande Vitória",
+            "duration": "47:50",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 92,
+            "season": 3,
+            "title": "Capítulo 92: A Grande Vitória",
+            "duration": "47:50",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 93,
+            "season": 3,
+            "title": "Capítulo 93: A Grande Vitória",
+            "duration": "47:50",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 94,
+            "season": 3,
+            "title": "Capítulo 94: A Grande Vitória",
+            "duration": "47:50",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 95,
+            "season": 3,
+            "title": "Capítulo 95: A Grande Vitória",
+            "duration": "47:50",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 96,
+            "season": 3,
+            "title": "Capítulo 96: A Grande Vitória",
+            "duration": "47:50",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 97,
+            "season": 3,
+            "title": "Capítulo 97: A Grande Vitória",
+            "duration": "47:50",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 98,
+            "season": 3,
+            "title": "Capítulo 98: A Grande Vitória",
+            "duration": "47:50",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 99,
+            "season": 3,
+            "title": "Capítulo 99: A Grande Vitória",
+            "duration": "47:50",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 100,
+            "season": 3,
+            "title": "Capítulo 100: A Grande Vitória",
+            "duration": "47:50",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          }
+        ],
+        "startIndex": 70
+      }
+    ],
+    "episodes": [
+      {
+        "num": 1,
+        "season": 1,
+        "title": "Capítulo 01: O Desafio de Bahar",
+        "duration": "48:30",
+        "videoId": "f954W8xAUhU",
+        "isFree": true
+      },
+      {
+        "num": 2,
+        "season": 1,
+        "title": "Capítulo 02: O Desafio de Bahar",
+        "duration": "48:30",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 3,
+        "season": 1,
+        "title": "Capítulo 03: O Desafio de Bahar",
+        "duration": "48:30",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 4,
+        "season": 1,
+        "title": "Capítulo 04: O Desafio de Bahar",
+        "duration": "48:30",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 5,
+        "season": 1,
+        "title": "Capítulo 05: O Desafio de Bahar",
+        "duration": "48:30",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 6,
+        "season": 1,
+        "title": "Capítulo 06: O Desafio de Bahar",
+        "duration": "48:30",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 7,
+        "season": 1,
+        "title": "Capítulo 07: O Desafio de Bahar",
+        "duration": "48:30",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 8,
+        "season": 1,
+        "title": "Capítulo 08: O Desafio de Bahar",
+        "duration": "48:30",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 9,
+        "season": 1,
+        "title": "Capítulo 09: O Desafio de Bahar",
+        "duration": "48:30",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 10,
+        "season": 1,
+        "title": "Capítulo 10: O Desafio de Bahar",
+        "duration": "48:30",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 11,
+        "season": 1,
+        "title": "Capítulo 11: O Desafio de Bahar",
+        "duration": "48:30",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 12,
+        "season": 1,
+        "title": "Capítulo 12: O Desafio de Bahar",
+        "duration": "48:30",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 13,
+        "season": 1,
+        "title": "Capítulo 13: O Desafio de Bahar",
+        "duration": "48:30",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 14,
+        "season": 1,
+        "title": "Capítulo 14: O Desafio de Bahar",
+        "duration": "48:30",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 15,
+        "season": 1,
+        "title": "Capítulo 15: O Desafio de Bahar",
+        "duration": "48:30",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 16,
+        "season": 1,
+        "title": "Capítulo 16: O Desafio de Bahar",
+        "duration": "48:30",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 17,
+        "season": 1,
+        "title": "Capítulo 17: O Desafio de Bahar",
+        "duration": "48:30",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 18,
+        "season": 1,
+        "title": "Capítulo 18: O Desafio de Bahar",
+        "duration": "48:30",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 19,
+        "season": 1,
+        "title": "Capítulo 19: O Desafio de Bahar",
+        "duration": "48:30",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 20,
+        "season": 1,
+        "title": "Capítulo 20: O Desafio de Bahar",
+        "duration": "48:30",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 21,
+        "season": 1,
+        "title": "Capítulo 21: O Desafio de Bahar",
+        "duration": "48:30",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 22,
+        "season": 1,
+        "title": "Capítulo 22: O Desafio de Bahar",
+        "duration": "48:30",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 23,
+        "season": 1,
+        "title": "Capítulo 23: O Desafio de Bahar",
+        "duration": "48:30",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 24,
+        "season": 1,
+        "title": "Capítulo 24: O Desafio de Bahar",
+        "duration": "48:30",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 25,
+        "season": 1,
+        "title": "Capítulo 25: O Desafio de Bahar",
+        "duration": "48:30",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 26,
+        "season": 1,
+        "title": "Capítulo 26: O Desafio de Bahar",
+        "duration": "48:30",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 27,
+        "season": 1,
+        "title": "Capítulo 27: O Desafio de Bahar",
+        "duration": "48:30",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 28,
+        "season": 1,
+        "title": "Capítulo 28: O Desafio de Bahar",
+        "duration": "48:30",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 29,
+        "season": 1,
+        "title": "Capítulo 29: O Desafio de Bahar",
+        "duration": "48:30",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 30,
+        "season": 1,
+        "title": "Capítulo 30: O Desafio de Bahar",
+        "duration": "48:30",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 31,
+        "season": 1,
+        "title": "Capítulo 31: O Desafio de Bahar",
+        "duration": "48:30",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 32,
+        "season": 1,
+        "title": "Capítulo 32: O Desafio de Bahar",
+        "duration": "48:30",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 33,
+        "season": 1,
+        "title": "Capítulo 33: O Desafio de Bahar",
+        "duration": "48:30",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 34,
+        "season": 1,
+        "title": "Capítulo 34: O Desafio de Bahar",
+        "duration": "48:30",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 35,
+        "season": 1,
+        "title": "Capítulo 35: O Desafio de Bahar",
+        "duration": "48:30",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 36,
+        "season": 2,
+        "title": "Capítulo 36: Segredos do Passado",
+        "duration": "49:15",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 37,
+        "season": 2,
+        "title": "Capítulo 37: Segredos do Passado",
+        "duration": "49:15",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 38,
+        "season": 2,
+        "title": "Capítulo 38: Segredos do Passado",
+        "duration": "49:15",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 39,
+        "season": 2,
+        "title": "Capítulo 39: Segredos do Passado",
+        "duration": "49:15",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 40,
+        "season": 2,
+        "title": "Capítulo 40: Segredos do Passado",
+        "duration": "49:15",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 41,
+        "season": 2,
+        "title": "Capítulo 41: Segredos do Passado",
+        "duration": "49:15",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 42,
+        "season": 2,
+        "title": "Capítulo 42: Segredos do Passado",
+        "duration": "49:15",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 43,
+        "season": 2,
+        "title": "Capítulo 43: Segredos do Passado",
+        "duration": "49:15",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 44,
+        "season": 2,
+        "title": "Capítulo 44: Segredos do Passado",
+        "duration": "49:15",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 45,
+        "season": 2,
+        "title": "Capítulo 45: Segredos do Passado",
+        "duration": "49:15",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 46,
+        "season": 2,
+        "title": "Capítulo 46: Segredos do Passado",
+        "duration": "49:15",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 47,
+        "season": 2,
+        "title": "Capítulo 47: Segredos do Passado",
+        "duration": "49:15",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 48,
+        "season": 2,
+        "title": "Capítulo 48: Segredos do Passado",
+        "duration": "49:15",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 49,
+        "season": 2,
+        "title": "Capítulo 49: Segredos do Passado",
+        "duration": "49:15",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 50,
+        "season": 2,
+        "title": "Capítulo 50: Segredos do Passado",
+        "duration": "49:15",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 51,
+        "season": 2,
+        "title": "Capítulo 51: Segredos do Passado",
+        "duration": "49:15",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 52,
+        "season": 2,
+        "title": "Capítulo 52: Segredos do Passado",
+        "duration": "49:15",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 53,
+        "season": 2,
+        "title": "Capítulo 53: Segredos do Passado",
+        "duration": "49:15",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 54,
+        "season": 2,
+        "title": "Capítulo 54: Segredos do Passado",
+        "duration": "49:15",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 55,
+        "season": 2,
+        "title": "Capítulo 55: Segredos do Passado",
+        "duration": "49:15",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 56,
+        "season": 2,
+        "title": "Capítulo 56: Segredos do Passado",
+        "duration": "49:15",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 57,
+        "season": 2,
+        "title": "Capítulo 57: Segredos do Passado",
+        "duration": "49:15",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 58,
+        "season": 2,
+        "title": "Capítulo 58: Segredos do Passado",
+        "duration": "49:15",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 59,
+        "season": 2,
+        "title": "Capítulo 59: Segredos do Passado",
+        "duration": "49:15",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 60,
+        "season": 2,
+        "title": "Capítulo 60: Segredos do Passado",
+        "duration": "49:15",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 61,
+        "season": 2,
+        "title": "Capítulo 61: Segredos do Passado",
+        "duration": "49:15",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 62,
+        "season": 2,
+        "title": "Capítulo 62: Segredos do Passado",
+        "duration": "49:15",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 63,
+        "season": 2,
+        "title": "Capítulo 63: Segredos do Passado",
+        "duration": "49:15",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 64,
+        "season": 2,
+        "title": "Capítulo 64: Segredos do Passado",
+        "duration": "49:15",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 65,
+        "season": 2,
+        "title": "Capítulo 65: Segredos do Passado",
+        "duration": "49:15",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 66,
+        "season": 2,
+        "title": "Capítulo 66: Segredos do Passado",
+        "duration": "49:15",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 67,
+        "season": 2,
+        "title": "Capítulo 67: Segredos do Passado",
+        "duration": "49:15",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 68,
+        "season": 2,
+        "title": "Capítulo 68: Segredos do Passado",
+        "duration": "49:15",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 69,
+        "season": 2,
+        "title": "Capítulo 69: Segredos do Passado",
+        "duration": "49:15",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 70,
+        "season": 2,
+        "title": "Capítulo 70: Segredos do Passado",
+        "duration": "49:15",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 71,
+        "season": 3,
+        "title": "Capítulo 71: A Grande Vitória",
+        "duration": "47:50",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 72,
+        "season": 3,
+        "title": "Capítulo 72: A Grande Vitória",
+        "duration": "47:50",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 73,
+        "season": 3,
+        "title": "Capítulo 73: A Grande Vitória",
+        "duration": "47:50",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 74,
+        "season": 3,
+        "title": "Capítulo 74: A Grande Vitória",
+        "duration": "47:50",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 75,
+        "season": 3,
+        "title": "Capítulo 75: A Grande Vitória",
+        "duration": "47:50",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 76,
+        "season": 3,
+        "title": "Capítulo 76: A Grande Vitória",
+        "duration": "47:50",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 77,
+        "season": 3,
+        "title": "Capítulo 77: A Grande Vitória",
+        "duration": "47:50",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 78,
+        "season": 3,
+        "title": "Capítulo 78: A Grande Vitória",
+        "duration": "47:50",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 79,
+        "season": 3,
+        "title": "Capítulo 79: A Grande Vitória",
+        "duration": "47:50",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 80,
+        "season": 3,
+        "title": "Capítulo 80: A Grande Vitória",
+        "duration": "47:50",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 81,
+        "season": 3,
+        "title": "Capítulo 81: A Grande Vitória",
+        "duration": "47:50",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 82,
+        "season": 3,
+        "title": "Capítulo 82: A Grande Vitória",
+        "duration": "47:50",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 83,
+        "season": 3,
+        "title": "Capítulo 83: A Grande Vitória",
+        "duration": "47:50",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 84,
+        "season": 3,
+        "title": "Capítulo 84: A Grande Vitória",
+        "duration": "47:50",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 85,
+        "season": 3,
+        "title": "Capítulo 85: A Grande Vitória",
+        "duration": "47:50",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 86,
+        "season": 3,
+        "title": "Capítulo 86: A Grande Vitória",
+        "duration": "47:50",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 87,
+        "season": 3,
+        "title": "Capítulo 87: A Grande Vitória",
+        "duration": "47:50",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 88,
+        "season": 3,
+        "title": "Capítulo 88: A Grande Vitória",
+        "duration": "47:50",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 89,
+        "season": 3,
+        "title": "Capítulo 89: A Grande Vitória",
+        "duration": "47:50",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 90,
+        "season": 3,
+        "title": "Capítulo 90: A Grande Vitória",
+        "duration": "47:50",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 91,
+        "season": 3,
+        "title": "Capítulo 91: A Grande Vitória",
+        "duration": "47:50",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 92,
+        "season": 3,
+        "title": "Capítulo 92: A Grande Vitória",
+        "duration": "47:50",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 93,
+        "season": 3,
+        "title": "Capítulo 93: A Grande Vitória",
+        "duration": "47:50",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 94,
+        "season": 3,
+        "title": "Capítulo 94: A Grande Vitória",
+        "duration": "47:50",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 95,
+        "season": 3,
+        "title": "Capítulo 95: A Grande Vitória",
+        "duration": "47:50",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 96,
+        "season": 3,
+        "title": "Capítulo 96: A Grande Vitória",
+        "duration": "47:50",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 97,
+        "season": 3,
+        "title": "Capítulo 97: A Grande Vitória",
+        "duration": "47:50",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 98,
+        "season": 3,
+        "title": "Capítulo 98: A Grande Vitória",
+        "duration": "47:50",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 99,
+        "season": 3,
+        "title": "Capítulo 99: A Grande Vitória",
+        "duration": "47:50",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 100,
+        "season": 3,
+        "title": "Capítulo 100: A Grande Vitória",
+        "duration": "47:50",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      }
+    ]
+  },
   {
     "id": "micro-ceo-vinganca-3t",
     "title": "O CEO Bilionário Arrependido — 3 Temporadas Completas",
     "channelName": "ShortMax Drama",
     "channelUrl": "https://www.youtube.com",
     "category": "microdramas",
-    "categoryLabel": "Minissérie Viral Verticais",
+    "categoryLabel": "Minisnovela Viral Verticais",
     "badge": "SUPER VIRAL ⚡",
     "isTrending": true,
     "rating": "4.8",
@@ -1258,378 +2917,6 @@ const NOVELAS_CATALOG = [
         "season": 3,
         "title": "Capítulo 75: O Encontro Inesperado",
         "duration": "51:35",
-        "videoId": "IPeKoGSaAqY",
-        "isFree": false
-      }
-    ]
-  },
-  {
-    "id": "dorama-round-6",
-    "title": "Round 6 (Squid Game) — Temporadas 1 e 2 Completas",
-    "channelName": "K-Thriller Brasil",
-    "channelUrl": "https://www.youtube.com",
-    "category": "doramas",
-    "categoryLabel": "Suspense & Sobrevivência",
-    "badge": "RECORDISTA GLOBAL 🎮",
-    "isTrending": true,
-    "rating": "4.9",
-    "views": "6.5M",
-    "likes": "320K",
-    "episodesCount": 20,
-    "seasonsCount": 2,
-    "synopsis": "Centenas de jogadores falidos aceitam um estranho convite para competir em jogos infantis. O prêmio é tentador, mas as consequências são mortais. Seong Gi-hun luta para sobreviver e depois retorna para vingança.",
-    "cover": "covers/dorama-6.jpg",
-    "banner": "covers/dorama-6.jpg",
-    "year": 2024,
-    "audio": "Dublado em Português (Brasil)",
-    "ageRating": "16",
-    "genres": [
-      "Dorama",
-      "Suspense",
-      "Ação",
-      "Dublado"
-    ],
-    "tags": [
-      "Round 6",
-      "Squid Game",
-      "Gi-hun",
-      "Jogos Mortais",
-      "Dublado"
-    ],
-    "seasons": [
-      {
-        "num": 1,
-        "label": "Temporada 1: O Jogo dos 45.6 Bilhões",
-        "episodes": [
-          {
-            "num": 1,
-            "season": 1,
-            "title": "Capítulo 01: O Encontro Inesperado",
-            "duration": "42:15",
-            "videoId": "IPeKoGSaAqY",
-            "isFree": true
-          },
-          {
-            "num": 2,
-            "season": 1,
-            "title": "Capítulo 02: Segredos do Passado",
-            "duration": "48:30",
-            "videoId": "IPeKoGSaAqY",
-            "isFree": false
-          },
-          {
-            "num": 3,
-            "season": 1,
-            "title": "Capítulo 03: Um Amor Proibido",
-            "duration": "52:10",
-            "videoId": "IPeKoGSaAqY",
-            "isFree": false
-          },
-          {
-            "num": 4,
-            "season": 1,
-            "title": "Capítulo 04: A Revelação Chocante",
-            "duration": "46:45",
-            "videoId": "IPeKoGSaAqY",
-            "isFree": false
-          },
-          {
-            "num": 5,
-            "season": 1,
-            "title": "Capítulo 05: O Confronto na Mansão",
-            "duration": "55:20",
-            "videoId": "IPeKoGSaAqY",
-            "isFree": false
-          },
-          {
-            "num": 6,
-            "season": 1,
-            "title": "Capítulo 06: A Noite da Decisão",
-            "duration": "49:10",
-            "videoId": "IPeKoGSaAqY",
-            "isFree": false
-          },
-          {
-            "num": 7,
-            "season": 1,
-            "title": "Capítulo 07: Traição Inesperada",
-            "duration": "51:35",
-            "videoId": "IPeKoGSaAqY",
-            "isFree": false
-          },
-          {
-            "num": 8,
-            "season": 1,
-            "title": "Capítulo 08: O Beijo sob a Chuva",
-            "duration": "44:50",
-            "videoId": "IPeKoGSaAqY",
-            "isFree": false
-          },
-          {
-            "num": 9,
-            "season": 1,
-            "title": "Capítulo 09: A Promessa Esquecida",
-            "duration": "58:00",
-            "videoId": "IPeKoGSaAqY",
-            "isFree": false
-          },
-          {
-            "num": 10,
-            "season": 1,
-            "title": "Capítulo 10: O Plano de Vingança",
-            "duration": "42:15",
-            "videoId": "IPeKoGSaAqY",
-            "isFree": false
-          }
-        ],
-        "startIndex": 0
-      },
-      {
-        "num": 2,
-        "label": "Temporada 2: O Retorno do Jogador 456",
-        "episodes": [
-          {
-            "num": 11,
-            "season": 2,
-            "title": "Capítulo 11: O Encontro Inesperado",
-            "duration": "42:15",
-            "videoId": "IPeKoGSaAqY",
-            "isFree": false
-          },
-          {
-            "num": 12,
-            "season": 2,
-            "title": "Capítulo 12: Segredos do Passado",
-            "duration": "48:30",
-            "videoId": "IPeKoGSaAqY",
-            "isFree": false
-          },
-          {
-            "num": 13,
-            "season": 2,
-            "title": "Capítulo 13: Um Amor Proibido",
-            "duration": "52:10",
-            "videoId": "IPeKoGSaAqY",
-            "isFree": false
-          },
-          {
-            "num": 14,
-            "season": 2,
-            "title": "Capítulo 14: A Revelação Chocante",
-            "duration": "46:45",
-            "videoId": "IPeKoGSaAqY",
-            "isFree": false
-          },
-          {
-            "num": 15,
-            "season": 2,
-            "title": "Capítulo 15: O Confronto na Mansão",
-            "duration": "55:20",
-            "videoId": "IPeKoGSaAqY",
-            "isFree": false
-          },
-          {
-            "num": 16,
-            "season": 2,
-            "title": "Capítulo 16: A Noite da Decisão",
-            "duration": "49:10",
-            "videoId": "IPeKoGSaAqY",
-            "isFree": false
-          },
-          {
-            "num": 17,
-            "season": 2,
-            "title": "Capítulo 17: Traição Inesperada",
-            "duration": "51:35",
-            "videoId": "IPeKoGSaAqY",
-            "isFree": false
-          },
-          {
-            "num": 18,
-            "season": 2,
-            "title": "Capítulo 18: O Beijo sob a Chuva",
-            "duration": "44:50",
-            "videoId": "IPeKoGSaAqY",
-            "isFree": false
-          },
-          {
-            "num": 19,
-            "season": 2,
-            "title": "Capítulo 19: A Promessa Esquecida",
-            "duration": "58:00",
-            "videoId": "IPeKoGSaAqY",
-            "isFree": false
-          },
-          {
-            "num": 20,
-            "season": 2,
-            "title": "Capítulo 20: O Plano de Vingança",
-            "duration": "42:15",
-            "videoId": "IPeKoGSaAqY",
-            "isFree": false
-          }
-        ],
-        "startIndex": 10
-      }
-    ],
-    "episodes": [
-      {
-        "num": 1,
-        "season": 1,
-        "title": "Capítulo 01: O Encontro Inesperado",
-        "duration": "42:15",
-        "videoId": "IPeKoGSaAqY",
-        "isFree": true
-      },
-      {
-        "num": 2,
-        "season": 1,
-        "title": "Capítulo 02: Segredos do Passado",
-        "duration": "48:30",
-        "videoId": "IPeKoGSaAqY",
-        "isFree": false
-      },
-      {
-        "num": 3,
-        "season": 1,
-        "title": "Capítulo 03: Um Amor Proibido",
-        "duration": "52:10",
-        "videoId": "IPeKoGSaAqY",
-        "isFree": false
-      },
-      {
-        "num": 4,
-        "season": 1,
-        "title": "Capítulo 04: A Revelação Chocante",
-        "duration": "46:45",
-        "videoId": "IPeKoGSaAqY",
-        "isFree": false
-      },
-      {
-        "num": 5,
-        "season": 1,
-        "title": "Capítulo 05: O Confronto na Mansão",
-        "duration": "55:20",
-        "videoId": "IPeKoGSaAqY",
-        "isFree": false
-      },
-      {
-        "num": 6,
-        "season": 1,
-        "title": "Capítulo 06: A Noite da Decisão",
-        "duration": "49:10",
-        "videoId": "IPeKoGSaAqY",
-        "isFree": false
-      },
-      {
-        "num": 7,
-        "season": 1,
-        "title": "Capítulo 07: Traição Inesperada",
-        "duration": "51:35",
-        "videoId": "IPeKoGSaAqY",
-        "isFree": false
-      },
-      {
-        "num": 8,
-        "season": 1,
-        "title": "Capítulo 08: O Beijo sob a Chuva",
-        "duration": "44:50",
-        "videoId": "IPeKoGSaAqY",
-        "isFree": false
-      },
-      {
-        "num": 9,
-        "season": 1,
-        "title": "Capítulo 09: A Promessa Esquecida",
-        "duration": "58:00",
-        "videoId": "IPeKoGSaAqY",
-        "isFree": false
-      },
-      {
-        "num": 10,
-        "season": 1,
-        "title": "Capítulo 10: O Plano de Vingança",
-        "duration": "42:15",
-        "videoId": "IPeKoGSaAqY",
-        "isFree": false
-      },
-      {
-        "num": 11,
-        "season": 2,
-        "title": "Capítulo 11: O Encontro Inesperado",
-        "duration": "42:15",
-        "videoId": "IPeKoGSaAqY",
-        "isFree": false
-      },
-      {
-        "num": 12,
-        "season": 2,
-        "title": "Capítulo 12: Segredos do Passado",
-        "duration": "48:30",
-        "videoId": "IPeKoGSaAqY",
-        "isFree": false
-      },
-      {
-        "num": 13,
-        "season": 2,
-        "title": "Capítulo 13: Um Amor Proibido",
-        "duration": "52:10",
-        "videoId": "IPeKoGSaAqY",
-        "isFree": false
-      },
-      {
-        "num": 14,
-        "season": 2,
-        "title": "Capítulo 14: A Revelação Chocante",
-        "duration": "46:45",
-        "videoId": "IPeKoGSaAqY",
-        "isFree": false
-      },
-      {
-        "num": 15,
-        "season": 2,
-        "title": "Capítulo 15: O Confronto na Mansão",
-        "duration": "55:20",
-        "videoId": "IPeKoGSaAqY",
-        "isFree": false
-      },
-      {
-        "num": 16,
-        "season": 2,
-        "title": "Capítulo 16: A Noite da Decisão",
-        "duration": "49:10",
-        "videoId": "IPeKoGSaAqY",
-        "isFree": false
-      },
-      {
-        "num": 17,
-        "season": 2,
-        "title": "Capítulo 17: Traição Inesperada",
-        "duration": "51:35",
-        "videoId": "IPeKoGSaAqY",
-        "isFree": false
-      },
-      {
-        "num": 18,
-        "season": 2,
-        "title": "Capítulo 18: O Beijo sob a Chuva",
-        "duration": "44:50",
-        "videoId": "IPeKoGSaAqY",
-        "isFree": false
-      },
-      {
-        "num": 19,
-        "season": 2,
-        "title": "Capítulo 19: A Promessa Esquecida",
-        "duration": "58:00",
-        "videoId": "IPeKoGSaAqY",
-        "isFree": false
-      },
-      {
-        "num": 20,
-        "season": 2,
-        "title": "Capítulo 20: O Plano de Vingança",
-        "duration": "42:15",
         "videoId": "IPeKoGSaAqY",
         "isFree": false
       }
@@ -73836,7 +75123,7 @@ const NOVELAS_CATALOG = [
     "channelName": "MuZi Drama Portugal",
     "channelUrl": "https://www.youtube.com/results?search_query=Ela%20Errou%20Por%20Desespero%3A%20O%20Meio-Irm%C3%A3o%20Milion%C3%A1rio",
     "category": "microdramas",
-    "categoryLabel": "Microdrama & Minissérie",
+    "categoryLabel": "Microdrama & Minisnovela",
     "badge": "MINISSÉRIE VIRAL 🔥",
     "isTrending": true,
     "rating": "4.8",
@@ -74249,7 +75536,7 @@ const NOVELAS_CATALOG = [
     "channelName": "iQIYI Portuguese - Get the iQIYI APP",
     "channelUrl": "https://www.youtube.com/results?search_query=A%20Vingan%C3%A7a%20da%20Herdeira%20Humilhada%20%E2%80%94%20Dublado",
     "category": "microdramas",
-    "categoryLabel": "Microdrama & Minissérie",
+    "categoryLabel": "Microdrama & Minisnovela",
     "badge": "MINISSÉRIE VIRAL 🔥",
     "isTrending": true,
     "rating": "4.9",
@@ -74662,7 +75949,7 @@ const NOVELAS_CATALOG = [
     "channelName": "Noverama TV",
     "channelUrl": "https://www.youtube.com/results?search_query=O%20Retorno%20do%20Bilion%C3%A1rio%20Sobrenatural%20%E2%80%94%20Completo",
     "category": "microdramas",
-    "categoryLabel": "Microdrama & Minissérie",
+    "categoryLabel": "Microdrama & Minisnovela",
     "badge": "MINISSÉRIE VIRAL 🔥",
     "isTrending": true,
     "rating": "5.0",
@@ -75075,7 +76362,7 @@ const NOVELAS_CATALOG = [
     "channelName": "MuZi Drama Portugal",
     "channelUrl": "https://www.youtube.com/results?search_query=A%20Esposa%20Trof%C3%A9u%20que%20Chocou%20a%20Alta%20Sociedade",
     "category": "microdramas",
-    "categoryLabel": "Microdrama & Minissérie",
+    "categoryLabel": "Microdrama & Minisnovela",
     "badge": "MINISSÉRIE VIRAL 🔥",
     "isTrending": true,
     "rating": "4.8",
@@ -75488,7 +76775,7 @@ const NOVELAS_CATALOG = [
     "channelName": "Noverama TV",
     "channelUrl": "https://www.youtube.com/results?search_query=O%20Beb%C3%AA%20Secreto%20do%20CEO%20Arrogante%20%E2%80%94%20Filme%20Completo",
     "category": "microdramas",
-    "categoryLabel": "Microdrama & Minissérie",
+    "categoryLabel": "Microdrama & Minisnovela",
     "badge": "MINISSÉRIE VIRAL 🔥",
     "isTrending": true,
     "rating": "4.9",
@@ -75901,7 +77188,7 @@ const NOVELAS_CATALOG = [
     "channelName": "A Hora da Estrela",
     "channelUrl": "https://www.youtube.com/results?search_query=Amor%20por%20Contrato%20de%20100%20Dias%20%E2%80%94%20Dublado",
     "category": "microdramas",
-    "categoryLabel": "Microdrama & Minissérie",
+    "categoryLabel": "Microdrama & Minisnovela",
     "badge": "MINISSÉRIE VIRAL 🔥",
     "isTrending": false,
     "rating": "5.0",
@@ -76314,7 +77601,7 @@ const NOVELAS_CATALOG = [
     "channelName": "Noverama TV",
     "channelUrl": "https://www.youtube.com/results?search_query=Minha%20Chefe%20Insuport%C3%A1vel%20%C3%A9%20a%20Dona%20de%20Tudo",
     "category": "microdramas",
-    "categoryLabel": "Microdrama & Minissérie",
+    "categoryLabel": "Microdrama & Minisnovela",
     "badge": "MINISSÉRIE VIRAL 🔥",
     "isTrending": false,
     "rating": "4.8",
@@ -76727,7 +78014,7 @@ const NOVELAS_CATALOG = [
     "channelName": "Noverama TV",
     "channelUrl": "https://www.youtube.com/results?search_query=A%20Secret%C3%A1ria%20do%20Magnata%20e%20a%20Gravidez%20Inesperada",
     "category": "microdramas",
-    "categoryLabel": "Microdrama & Minissérie",
+    "categoryLabel": "Microdrama & Minisnovela",
     "badge": "MINISSÉRIE VIRAL 🔥",
     "isTrending": false,
     "rating": "4.9",
@@ -77140,7 +78427,7 @@ const NOVELAS_CATALOG = [
     "channelName": "Noverama TV",
     "channelUrl": "https://www.youtube.com/results?search_query=Destino%20Tra%C3%A7ado%3A%20Do%20Lixo%20ao%20Luxo%20em%2024%20Horas",
     "category": "microdramas",
-    "categoryLabel": "Microdrama & Minissérie",
+    "categoryLabel": "Microdrama & Minisnovela",
     "badge": "MINISSÉRIE VIRAL 🔥",
     "isTrending": false,
     "rating": "5.0",
@@ -77553,7 +78840,7 @@ const NOVELAS_CATALOG = [
     "channelName": "Noverama TV",
     "channelUrl": "https://www.youtube.com/results?search_query=O%20Guarda-Costas%20Proibido%20da%20Filha%20do%20Chefe",
     "category": "microdramas",
-    "categoryLabel": "Microdrama & Minissérie",
+    "categoryLabel": "Microdrama & Minisnovela",
     "badge": "MINISSÉRIE VIRAL 🔥",
     "isTrending": false,
     "rating": "4.8",
@@ -77966,7 +79253,7 @@ const NOVELAS_CATALOG = [
     "channelName": "Noverama TV",
     "channelUrl": "https://www.youtube.com/results?search_query=O%20Casamento%20Falso%20com%20o%20Herdeiro%20Bilion%C3%A1rio",
     "category": "microdramas",
-    "categoryLabel": "Microdrama & Minissérie",
+    "categoryLabel": "Microdrama & Minisnovela",
     "badge": "MINISSÉRIE VIRAL 🔥",
     "isTrending": false,
     "rating": "4.9",
@@ -78379,7 +79666,7 @@ const NOVELAS_CATALOG = [
     "channelName": "Noverama TV",
     "channelUrl": "https://www.youtube.com/results?search_query=Noiva%20por%20Acidente%3A%20O%20Magnata%20Apaixonado",
     "category": "microdramas",
-    "categoryLabel": "Microdrama & Minissérie",
+    "categoryLabel": "Microdrama & Minisnovela",
     "badge": "MINISSÉRIE VIRAL 🔥",
     "isTrending": false,
     "rating": "5.0",
@@ -78792,7 +80079,7 @@ const NOVELAS_CATALOG = [
     "channelName": "Noverama TV",
     "channelUrl": "https://www.youtube.com/results?search_query=A%20Filha%20Perdida%20do%20Homem%20Mais%20Rico%20da%20Cidade",
     "category": "microdramas",
-    "categoryLabel": "Microdrama & Minissérie",
+    "categoryLabel": "Microdrama & Minisnovela",
     "badge": "MINISSÉRIE VIRAL 🔥",
     "isTrending": false,
     "rating": "4.8",
@@ -79205,7 +80492,7 @@ const NOVELAS_CATALOG = [
     "channelName": "Noverama TV",
     "channelUrl": "https://www.youtube.com/results?search_query=Casamento%20por%20Conveni%C3%AAncia%20com%20o%20Magnata%20Cruel",
     "category": "microdramas",
-    "categoryLabel": "Microdrama & Minissérie",
+    "categoryLabel": "Microdrama & Minisnovela",
     "badge": "MINISSÉRIE VIRAL 🔥",
     "isTrending": false,
     "rating": "4.9",
@@ -79618,7 +80905,7 @@ const NOVELAS_CATALOG = [
     "channelName": "Noverama TV",
     "channelUrl": "https://www.youtube.com/results?search_query=A%20Vingan%C3%A7a%20da%20Bab%C3%A1%20Secreta%20na%20Mans%C3%A3o",
     "category": "microdramas",
-    "categoryLabel": "Microdrama & Minissérie",
+    "categoryLabel": "Microdrama & Minisnovela",
     "badge": "MINISSÉRIE VIRAL 🔥",
     "isTrending": false,
     "rating": "5.0",
@@ -80031,7 +81318,7 @@ const NOVELAS_CATALOG = [
     "channelName": "Noverama TV",
     "channelUrl": "https://www.youtube.com/results?search_query=Herdeira%20Sobrenatural%20Disfar%C3%A7ada%20de%20Faxineira",
     "category": "microdramas",
-    "categoryLabel": "Microdrama & Minissérie",
+    "categoryLabel": "Microdrama & Minisnovela",
     "badge": "MINISSÉRIE VIRAL 🔥",
     "isTrending": false,
     "rating": "4.8",
@@ -80444,7 +81731,7 @@ const NOVELAS_CATALOG = [
     "channelName": "Noverama TV",
     "channelUrl": "https://www.youtube.com/results?search_query=Tra%C3%ADda%20pelo%20Noivo%2C%20Pedida%20pelo%20Tio%20Bilion%C3%A1rio",
     "category": "microdramas",
-    "categoryLabel": "Microdrama & Minissérie",
+    "categoryLabel": "Microdrama & Minisnovela",
     "badge": "MINISSÉRIE VIRAL 🔥",
     "isTrending": false,
     "rating": "4.9",
@@ -80857,7 +82144,7 @@ const NOVELAS_CATALOG = [
     "channelName": "Noverama TV",
     "channelUrl": "https://www.youtube.com/results?search_query=O%20Div%C3%B3rcio%20de%2010%20Bilh%C3%B5es%20de%20D%C3%B3lares",
     "category": "microdramas",
-    "categoryLabel": "Microdrama & Minissérie",
+    "categoryLabel": "Microdrama & Minisnovela",
     "badge": "MINISSÉRIE VIRAL 🔥",
     "isTrending": false,
     "rating": "5.0",
@@ -81270,7 +82557,7 @@ const NOVELAS_CATALOG = [
     "channelName": "Séries Turcas Dubladas em Português",
     "channelUrl": "https://www.youtube.com/results?search_query=O%20Segredo%20dos%20Trig%C3%AAmeos%20do%20CEO%20Solteiro",
     "category": "microdramas",
-    "categoryLabel": "Microdrama & Minissérie",
+    "categoryLabel": "Microdrama & Minisnovela",
     "badge": "MINISSÉRIE VIRAL 🔥",
     "isTrending": false,
     "rating": "4.8",
@@ -81683,7 +82970,7 @@ const NOVELAS_CATALOG = [
     "channelName": "Séries Turcas Dubladas em Português",
     "channelUrl": "https://www.youtube.com/results?search_query=A%20Imperatriz%20da%20M%C3%A1fia%20Disfar%C3%A7ada%20de%20Humilde",
     "category": "microdramas",
-    "categoryLabel": "Microdrama & Minissérie",
+    "categoryLabel": "Microdrama & Minisnovela",
     "badge": "MINISSÉRIE VIRAL 🔥",
     "isTrending": false,
     "rating": "4.9",
@@ -82096,7 +83383,7 @@ const NOVELAS_CATALOG = [
     "channelName": "Microssérie Hit",
     "channelUrl": "https://www.youtube.com/results?search_query=De%20Mendiga%20a%20Bilion%C3%A1ria%20em%203%20Dias",
     "category": "microdramas",
-    "categoryLabel": "Microdrama & Minissérie",
+    "categoryLabel": "Microdrama & Minisnovela",
     "badge": "MINISSÉRIE VIRAL 🔥",
     "isTrending": false,
     "rating": "5.0",
@@ -82509,7 +83796,7 @@ const NOVELAS_CATALOG = [
     "channelName": "Minisséries de Drama",
     "channelUrl": "https://www.youtube.com/results?search_query=O%20Amor%20Cego%20do%20CEO%20Desmemoriado",
     "category": "microdramas",
-    "categoryLabel": "Microdrama & Minissérie",
+    "categoryLabel": "Microdrama & Minisnovela",
     "badge": "MINISSÉRIE VIRAL 🔥",
     "isTrending": false,
     "rating": "4.8",
@@ -82922,7 +84209,7 @@ const NOVELAS_CATALOG = [
     "channelName": "Suspense Channel Brasil",
     "channelUrl": "https://www.youtube.com/results?search_query=A%20M%C3%A9dica%20Prod%C3%ADgio%20e%20o%20General%20Implac%C3%A1vel",
     "category": "microdramas",
-    "categoryLabel": "Microdrama & Minissérie",
+    "categoryLabel": "Microdrama & Minisnovela",
     "badge": "MINISSÉRIE VIRAL 🔥",
     "isTrending": false,
     "rating": "4.9",
@@ -83335,7 +84622,7 @@ const NOVELAS_CATALOG = [
     "channelName": "Suspense Channel Brasil",
     "channelUrl": "https://www.youtube.com/results?search_query=Amor%20Inesperado%20no%20Elevador%20da%20Empresa",
     "category": "microdramas",
-    "categoryLabel": "Microdrama & Minissérie",
+    "categoryLabel": "Microdrama & Minisnovela",
     "badge": "MINISSÉRIE VIRAL 🔥",
     "isTrending": false,
     "rating": "5.0",
@@ -83748,7 +85035,7 @@ const NOVELAS_CATALOG = [
     "channelName": "Super Filmes & Séries BR",
     "channelUrl": "https://www.youtube.com/results?search_query=A%20Gar%C3%A7onete%20que%20Salvou%20o%20Magnata",
     "category": "microdramas",
-    "categoryLabel": "Microdrama & Minissérie",
+    "categoryLabel": "Microdrama & Minisnovela",
     "badge": "MINISSÉRIE VIRAL 🔥",
     "isTrending": false,
     "rating": "4.8",
@@ -84161,7 +85448,7 @@ const NOVELAS_CATALOG = [
     "channelName": "Super Filmes & Séries BR",
     "channelUrl": "https://www.youtube.com/results?search_query=O%20Marido%20de%20Aluguel%20que%20Era%20um%20Bilion%C3%A1rio",
     "category": "microdramas",
-    "categoryLabel": "Microdrama & Minissérie",
+    "categoryLabel": "Microdrama & Minisnovela",
     "badge": "MINISSÉRIE VIRAL 🔥",
     "isTrending": false,
     "rating": "4.9",
@@ -84574,7 +85861,7 @@ const NOVELAS_CATALOG = [
     "channelName": "Séries e novelas de amor",
     "channelUrl": "https://www.youtube.com/results?search_query=O%20Renascimento%20da%20Rainha%20dos%20Neg%C3%B3cios",
     "category": "microdramas",
-    "categoryLabel": "Microdrama & Minissérie",
+    "categoryLabel": "Microdrama & Minisnovela",
     "badge": "MINISSÉRIE VIRAL 🔥",
     "isTrending": false,
     "rating": "5.0",
@@ -84987,7 +86274,7 @@ const NOVELAS_CATALOG = [
     "channelName": "Cine Drama Series",
     "channelUrl": "https://www.youtube.com/results?search_query=A%20Filha%20Adotiva%20que%20Superou%20a%20Todos",
     "category": "microdramas",
-    "categoryLabel": "Microdrama & Minissérie",
+    "categoryLabel": "Microdrama & Minisnovela",
     "badge": "MINISSÉRIE VIRAL 🔥",
     "isTrending": false,
     "rating": "4.8",
@@ -85400,7 +86687,7 @@ const NOVELAS_CATALOG = [
     "channelName": "SaltyTV Brasil",
     "channelUrl": "https://www.youtube.com/results?search_query=A%20M%C3%A3e%20Solteira%20e%20o%20Presidente%20Solteir%C3%A3o",
     "category": "microdramas",
-    "categoryLabel": "Microdrama & Minissérie",
+    "categoryLabel": "Microdrama & Minisnovela",
     "badge": "MINISSÉRIE VIRAL 🔥",
     "isTrending": false,
     "rating": "4.9",
@@ -85813,7 +87100,7 @@ const NOVELAS_CATALOG = [
     "channelName": "Microssérie Hit",
     "channelUrl": "https://www.youtube.com/results?search_query=O%20Casamento%20Rel%C3%A2mpago%20com%20o%20Chefe%20Misterioso",
     "category": "microdramas",
-    "categoryLabel": "Microdrama & Minissérie",
+    "categoryLabel": "Microdrama & Minisnovela",
     "badge": "MINISSÉRIE VIRAL 🔥",
     "isTrending": false,
     "rating": "5.0",
@@ -86226,7 +87513,7 @@ const NOVELAS_CATALOG = [
     "channelName": "Lezinha Séries incríveis ",
     "channelUrl": "https://www.youtube.com/results?search_query=A%20Herdeira%20das%20Joias%20Perdidas%20de%20Paris",
     "category": "microdramas",
-    "categoryLabel": "Microdrama & Minissérie",
+    "categoryLabel": "Microdrama & Minisnovela",
     "badge": "MINISSÉRIE VIRAL 🔥",
     "isTrending": false,
     "rating": "4.8",
@@ -86639,7 +87926,7 @@ const NOVELAS_CATALOG = [
     "channelName": "Historias Inspiram ",
     "channelUrl": "https://www.youtube.com/results?search_query=Seduzida%20pelo%20Inimigo%20do%20Meu%20Pai",
     "category": "microdramas",
-    "categoryLabel": "Microdrama & Minissérie",
+    "categoryLabel": "Microdrama & Minisnovela",
     "badge": "MINISSÉRIE VIRAL 🔥",
     "isTrending": false,
     "rating": "4.9",
@@ -87052,7 +88339,7 @@ const NOVELAS_CATALOG = [
     "channelName": "Tem Alguém Assistindo?",
     "channelUrl": "https://www.youtube.com/results?search_query=O%20Teste%20de%20DNA%20que%20Revelou%20a%20Verdade",
     "category": "microdramas",
-    "categoryLabel": "Microdrama & Minissérie",
+    "categoryLabel": "Microdrama & Minisnovela",
     "badge": "MINISSÉRIE VIRAL 🔥",
     "isTrending": false,
     "rating": "5.0",
@@ -87465,7 +88752,7 @@ const NOVELAS_CATALOG = [
     "channelName": "DramaBox - Streaming de Mini Dramas",
     "channelUrl": "https://www.youtube.com/results?search_query=Amor%20Proibido%20entre%20a%20Modelo%20e%20o%20Fot%C3%B3grafo",
     "category": "microdramas",
-    "categoryLabel": "Microdrama & Minissérie",
+    "categoryLabel": "Microdrama & Minisnovela",
     "badge": "MINISSÉRIE VIRAL 🔥",
     "isTrending": false,
     "rating": "4.8",
@@ -87878,7 +89165,7 @@ const NOVELAS_CATALOG = [
     "channelName": "Sidney Campos",
     "channelUrl": "https://www.youtube.com/results?search_query=A%20Vingan%C3%A7a%20da%20Ex-Esposa%20Renovada",
     "category": "microdramas",
-    "categoryLabel": "Microdrama & Minissérie",
+    "categoryLabel": "Microdrama & Minisnovela",
     "badge": "MINISSÉRIE VIRAL 🔥",
     "isTrending": false,
     "rating": "4.9",
@@ -88291,7 +89578,7 @@ const NOVELAS_CATALOG = [
     "channelName": "Nerdflix Brasil",
     "channelUrl": "https://www.youtube.com/results?search_query=O%20Casamento%20Secreto%20na%20Alta%20Roda",
     "category": "microdramas",
-    "categoryLabel": "Microdrama & Minissérie",
+    "categoryLabel": "Microdrama & Minisnovela",
     "badge": "MINISSÉRIE VIRAL 🔥",
     "isTrending": false,
     "rating": "5.0",
@@ -88704,7 +89991,7 @@ const NOVELAS_CATALOG = [
     "channelName": "Teatro Hot Drama",
     "channelUrl": "https://www.youtube.com/results?search_query=A%20Filha%20do%20Mordomo%20que%20Dominou%20o%20Imp%C3%A9rio",
     "category": "microdramas",
-    "categoryLabel": "Microdrama & Minissérie",
+    "categoryLabel": "Microdrama & Minisnovela",
     "badge": "MINISSÉRIE VIRAL 🔥",
     "isTrending": false,
     "rating": "4.8",
@@ -89117,7 +90404,7 @@ const NOVELAS_CATALOG = [
     "channelName": "Lezinha Séries ",
     "channelUrl": "https://www.youtube.com/results?search_query=A%20Jogada%20de%20Mestre%20da%20Mulher%20Tra%C3%ADda",
     "category": "microdramas",
-    "categoryLabel": "Microdrama & Minissérie",
+    "categoryLabel": "Microdrama & Minisnovela",
     "badge": "MINISSÉRIE VIRAL 🔥",
     "isTrending": false,
     "rating": "4.9",
@@ -89530,7 +90817,7 @@ const NOVELAS_CATALOG = [
     "channelName": "Biel GEN TV",
     "channelUrl": "https://www.youtube.com/results?search_query=O%20Magnata%20Misterioso%20da%20Ilha%20Privada",
     "category": "microdramas",
-    "categoryLabel": "Microdrama & Minissérie",
+    "categoryLabel": "Microdrama & Minisnovela",
     "badge": "MINISSÉRIE VIRAL 🔥",
     "isTrending": false,
     "rating": "5.0",
@@ -89943,7 +91230,7 @@ const NOVELAS_CATALOG = [
     "channelName": "Prime Drama",
     "channelUrl": "https://www.youtube.com/results?search_query=O%20Reencontro%20ap%C3%B3s%205%20Anos%20de%20Fuga",
     "category": "microdramas",
-    "categoryLabel": "Microdrama & Minissérie",
+    "categoryLabel": "Microdrama & Minisnovela",
     "badge": "MINISSÉRIE VIRAL 🔥",
     "isTrending": false,
     "rating": "4.8",
@@ -90356,7 +91643,7 @@ const NOVELAS_CATALOG = [
     "channelName": "Mininovelas de Bolso",
     "channelUrl": "https://www.youtube.com/results?search_query=A%20Herdeira%20Suprema%20do%20Cl%C3%A3%20Drag%C3%A3o",
     "category": "microdramas",
-    "categoryLabel": "Microdrama & Minissérie",
+    "categoryLabel": "Microdrama & Minisnovela",
     "badge": "MINISSÉRIE VIRAL 🔥",
     "isTrending": false,
     "rating": "4.9",
@@ -90769,7 +92056,7 @@ const NOVELAS_CATALOG = [
     "channelName": "Canal  Lider Video",
     "channelUrl": "https://www.youtube.com/results?search_query=O%20Contrato%20Nupcial%20do%20Dono%20do%20Hospital",
     "category": "microdramas",
-    "categoryLabel": "Microdrama & Minissérie",
+    "categoryLabel": "Microdrama & Minisnovela",
     "badge": "MINISSÉRIE VIRAL 🔥",
     "isTrending": false,
     "rating": "5.0",
@@ -91182,7 +92469,7 @@ const NOVELAS_CATALOG = [
     "channelName": "Cida.Garciaa_",
     "channelUrl": "https://www.youtube.com/results?search_query=A%20Bab%C3%A1%20dos%20G%C3%AAmeos%20do%20Bilion%C3%A1rio%20Vi%C3%BAvo",
     "category": "microdramas",
-    "categoryLabel": "Microdrama & Minissérie",
+    "categoryLabel": "Microdrama & Minisnovela",
     "badge": "MINISSÉRIE VIRAL 🔥",
     "isTrending": false,
     "rating": "4.8",
@@ -91595,7 +92882,7 @@ const NOVELAS_CATALOG = [
     "channelName": "Lezinha Séries ",
     "channelUrl": "https://www.youtube.com/results?search_query=Amor%20e%20Honra%20na%20Cidade%20Proibida",
     "category": "microdramas",
-    "categoryLabel": "Microdrama & Minissérie",
+    "categoryLabel": "Microdrama & Minisnovela",
     "badge": "MINISSÉRIE VIRAL 🔥",
     "isTrending": false,
     "rating": "4.9",
@@ -92008,7 +93295,7 @@ const NOVELAS_CATALOG = [
     "channelName": "Minissérie - série completa",
     "channelUrl": "https://www.youtube.com/results?search_query=O%20Segredo%20Oculto%20no%20Testamento%20do%20Av%C3%B4",
     "category": "microdramas",
-    "categoryLabel": "Microdrama & Minissérie",
+    "categoryLabel": "Microdrama & Minisnovela",
     "badge": "MINISSÉRIE VIRAL 🔥",
     "isTrending": false,
     "rating": "5.0",
@@ -92421,7 +93708,7 @@ const NOVELAS_CATALOG = [
     "channelName": "Minissérie - série completa",
     "channelUrl": "https://www.youtube.com/results?search_query=A%20Estagi%C3%A1ria%20que%20Ensinou%20o%20CEO%20a%20Amar",
     "category": "microdramas",
-    "categoryLabel": "Microdrama & Minissérie",
+    "categoryLabel": "Microdrama & Minisnovela",
     "badge": "MINISSÉRIE VIRAL 🔥",
     "isTrending": false,
     "rating": "4.8",
@@ -92834,7 +94121,7 @@ const NOVELAS_CATALOG = [
     "channelName": "Series Turcas de amor",
     "channelUrl": "https://www.youtube.com/results?search_query=O%20Casamento%20For%C3%A7ado%20que%20Virou%20Paix%C3%A3o",
     "category": "microdramas",
-    "categoryLabel": "Microdrama & Minissérie",
+    "categoryLabel": "Microdrama & Minisnovela",
     "badge": "MINISSÉRIE VIRAL 🔥",
     "isTrending": false,
     "rating": "4.9",
@@ -93247,7 +94534,7 @@ const NOVELAS_CATALOG = [
     "channelName": "Canal  Lider Video",
     "channelUrl": "https://www.youtube.com/results?search_query=A%20Falsa%20Noiva%20do%20Pr%C3%ADncipe%20dos%20Neg%C3%B3cios",
     "category": "microdramas",
-    "categoryLabel": "Microdrama & Minissérie",
+    "categoryLabel": "Microdrama & Minisnovela",
     "badge": "MINISSÉRIE VIRAL 🔥",
     "isTrending": false,
     "rating": "5.0",
@@ -93660,7 +94947,7 @@ const NOVELAS_CATALOG = [
     "channelName": "Minissérie - série completa",
     "channelUrl": "https://www.youtube.com/results?search_query=A%20Vingan%C3%A7a%20da%20Esposa%20Silenciosa",
     "category": "microdramas",
-    "categoryLabel": "Microdrama & Minissérie",
+    "categoryLabel": "Microdrama & Minisnovela",
     "badge": "MINISSÉRIE VIRAL 🔥",
     "isTrending": false,
     "rating": "4.8",
@@ -94073,7 +95360,7 @@ const NOVELAS_CATALOG = [
     "channelName": "SÉRIES TURCAS UMA PAIXÃO",
     "channelUrl": "https://www.youtube.com/results?search_query=O%20Magnata%20que%20Se%20Arrependeu%20Tarde%20Demais",
     "category": "microdramas",
-    "categoryLabel": "Microdrama & Minissérie",
+    "categoryLabel": "Microdrama & Minisnovela",
     "badge": "MINISSÉRIE VIRAL 🔥",
     "isTrending": false,
     "rating": "4.9",
@@ -94486,7 +95773,7 @@ const NOVELAS_CATALOG = [
     "channelName": "Hot Minissérie",
     "channelUrl": "https://www.youtube.com/@HotMiniss%C3%A9rie",
     "category": "hot",
-    "categoryLabel": "Hot Minissérie +18",
+    "categoryLabel": "Hot Minisnovela +18",
     "badge": "HOT MINISSÉRIE 💋",
     "isTrending": true,
     "rating": "4.9",
@@ -94840,7 +96127,7 @@ const NOVELAS_CATALOG = [
     "channelName": "Hot Minissérie",
     "channelUrl": "https://www.youtube.com/@HotMiniss%C3%A9rie",
     "category": "hot",
-    "categoryLabel": "Hot Minissérie +18",
+    "categoryLabel": "Hot Minisnovela +18",
     "badge": "HOT MINISSÉRIE 💋",
     "isTrending": true,
     "rating": "4.8",
@@ -95224,7 +96511,7 @@ const NOVELAS_CATALOG = [
     "channelName": "Hot Minissérie",
     "channelUrl": "https://www.youtube.com/@HotMiniss%C3%A9rie",
     "category": "hot",
-    "categoryLabel": "Hot Minissérie +18",
+    "categoryLabel": "Hot Minisnovela +18",
     "badge": "HOT MINISSÉRIE 💋",
     "isTrending": false,
     "rating": "4.7",
@@ -95548,7 +96835,7 @@ const NOVELAS_CATALOG = [
     "channelName": "Hot Minissérie",
     "channelUrl": "https://www.youtube.com/@HotMiniss%C3%A9rie",
     "category": "hot",
-    "categoryLabel": "Hot Minissérie +18",
+    "categoryLabel": "Hot Minisnovela +18",
     "badge": "HOT MINISSÉRIE 💋",
     "isTrending": false,
     "rating": "4.6",
@@ -95902,7 +97189,7 @@ const NOVELAS_CATALOG = [
     "channelName": "Hot Minissérie",
     "channelUrl": "https://www.youtube.com/@HotMiniss%C3%A9rie",
     "category": "hot",
-    "categoryLabel": "Hot Minissérie +18",
+    "categoryLabel": "Hot Minisnovela +18",
     "badge": "HOT MINISSÉRIE 💋",
     "isTrending": false,
     "rating": "4.7",
@@ -96225,7 +97512,7 @@ const NOVELAS_CATALOG = [
     "channelName": "Hot Minissérie",
     "channelUrl": "https://www.youtube.com/@HotMiniss%C3%A9rie",
     "category": "hot",
-    "categoryLabel": "Hot Minissérie +18",
+    "categoryLabel": "Hot Minisnovela +18",
     "badge": "HOT MINISSÉRIE 💋",
     "isTrending": true,
     "rating": "4.8",
@@ -96608,7 +97895,7 @@ const NOVELAS_CATALOG = [
     "channelName": "Hot Minissérie",
     "channelUrl": "https://www.youtube.com/@HotMiniss%C3%A9rie",
     "category": "hot",
-    "categoryLabel": "Hot Minissérie +18",
+    "categoryLabel": "Hot Minisnovela +18",
     "badge": "HOT MINISSÉRIE 💋",
     "isTrending": false,
     "rating": "4.6",
@@ -96961,7 +98248,7 @@ const NOVELAS_CATALOG = [
     "channelName": "Hot Minissérie",
     "channelUrl": "https://www.youtube.com/@HotMiniss%C3%A9rie",
     "category": "hot",
-    "categoryLabel": "Hot Minissérie +18",
+    "categoryLabel": "Hot Minisnovela +18",
     "badge": "HOT MINISSÉRIE 💋",
     "isTrending": false,
     "rating": "4.5",
@@ -97231,7 +98518,7 @@ const NOVELAS_CATALOG = [
     "channelName": "Hot Minissérie",
     "channelUrl": "https://www.youtube.com/@HotMiniss%C3%A9rie",
     "category": "hot",
-    "categoryLabel": "Hot Minissérie +18",
+    "categoryLabel": "Hot Minisnovela +18",
     "badge": "HOT MINISSÉRIE 💋",
     "isTrending": true,
     "rating": "4.8",
@@ -97554,7 +98841,7 @@ const NOVELAS_CATALOG = [
     "channelName": "Hot Minissérie",
     "channelUrl": "https://www.youtube.com/@HotMiniss%C3%A9rie",
     "category": "hot",
-    "categoryLabel": "Hot Minissérie +18",
+    "categoryLabel": "Hot Minisnovela +18",
     "badge": "HOT MINISSÉRIE 💋",
     "isTrending": true,
     "rating": "4.9",
@@ -97877,7 +99164,7 @@ const NOVELAS_CATALOG = [
     "channelName": "Hot Minissérie",
     "channelUrl": "https://www.youtube.com/@HotMiniss%C3%A9rie",
     "category": "hot",
-    "categoryLabel": "Hot Minissérie +18",
+    "categoryLabel": "Hot Minisnovela +18",
     "badge": "HOT MINISSÉRIE 💋",
     "isTrending": true,
     "rating": "4.9",
@@ -98261,7 +99548,7 @@ const NOVELAS_CATALOG = [
     "channelName": "Hot Minissérie",
     "channelUrl": "https://www.youtube.com/@HotMiniss%C3%A9rie",
     "category": "hot",
-    "categoryLabel": "Hot Minissérie +18",
+    "categoryLabel": "Hot Minisnovela +18",
     "badge": "HOT MINISSÉRIE 💋",
     "isTrending": true,
     "rating": "4.8",
@@ -98614,7 +99901,7 @@ const NOVELAS_CATALOG = [
     "channelName": "Hot Minissérie",
     "channelUrl": "https://www.youtube.com/@HotMiniss%C3%A9rie",
     "category": "hot",
-    "categoryLabel": "Hot Minissérie +18",
+    "categoryLabel": "Hot Minisnovela +18",
     "badge": "HOT MINISSÉRIE 💋",
     "isTrending": true,
     "rating": "4.8",
@@ -98998,7 +100285,7 @@ const NOVELAS_CATALOG = [
     "channelName": "Hot Minissérie",
     "channelUrl": "https://www.youtube.com/@HotMiniss%C3%A9rie",
     "category": "hot",
-    "categoryLabel": "Hot Minissérie +18",
+    "categoryLabel": "Hot Minisnovela +18",
     "badge": "HOT MINISSÉRIE 💋",
     "isTrending": false,
     "rating": "4.6",
@@ -99351,7 +100638,7 @@ const NOVELAS_CATALOG = [
     "channelName": "Hot Minissérie",
     "channelUrl": "https://www.youtube.com/@HotMiniss%C3%A9rie",
     "category": "hot",
-    "categoryLabel": "Hot Minissérie +18",
+    "categoryLabel": "Hot Minisnovela +18",
     "badge": "HOT MINISSÉRIE 💋",
     "isTrending": false,
     "rating": "4.5",
@@ -99675,7 +100962,7 @@ const NOVELAS_CATALOG = [
     "channelName": "Hot Minissérie",
     "channelUrl": "https://www.youtube.com/@HotMiniss%C3%A9rie",
     "category": "hot",
-    "categoryLabel": "Hot Minissérie +18",
+    "categoryLabel": "Hot Minisnovela +18",
     "badge": "HOT MINISSÉRIE 💋",
     "isTrending": false,
     "rating": "4.7",
@@ -99998,7 +101285,7 @@ const NOVELAS_CATALOG = [
     "channelName": "Hot Minissérie",
     "channelUrl": "https://www.youtube.com/@HotMiniss%C3%A9rie",
     "category": "hot",
-    "categoryLabel": "Hot Minissérie +18",
+    "categoryLabel": "Hot Minisnovela +18",
     "badge": "HOT MINISSÉRIE 💋",
     "isTrending": true,
     "rating": "4.8",
@@ -100351,7 +101638,7 @@ const NOVELAS_CATALOG = [
     "channelName": "Hot Minissérie",
     "channelUrl": "https://www.youtube.com/@HotMiniss%C3%A9rie",
     "category": "hot",
-    "categoryLabel": "Hot Minissérie +18",
+    "categoryLabel": "Hot Minisnovela +18",
     "badge": "HOT MINISSÉRIE 💋",
     "isTrending": false,
     "rating": "4.6",
