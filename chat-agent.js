@@ -186,6 +186,9 @@
 
   // ─── GERENCIAMENTO DE ESTADO VISUAL DO CHAT ─────────────────────────────────
   window.toggleDonaSirleneChat = function () {
+    if (!document.getElementById('donaSirleneChatRoot')) {
+      initChatWidget();
+    }
     if (isChatOpen) {
       closeDonaSirleneChat();
     } else {
@@ -194,6 +197,9 @@
   };
 
   window.openDonaSirleneChat = function (initialMsg) {
+    if (!document.getElementById('donaSirleneChatRoot')) {
+      initChatWidget();
+    }
     const win = document.getElementById('dsChatWindow');
     const trigger = document.getElementById('dsFloatingTrigger');
     const badge = document.getElementById('dsUnreadBadge');
@@ -740,8 +746,13 @@
     }
   });
 
+  // Exporta função global para forçar inicialização
+  window.initDonaSirleneChatWidget = initChatWidget;
+
   // Inicializa o widget quando a página estiver carregada
-  if (document.readyState === 'loading') {
+  if (document.body) {
+    initChatWidget();
+  } else if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initChatWidget);
   } else {
     initChatWidget();
