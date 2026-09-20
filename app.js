@@ -123,8 +123,16 @@ function isVipMember() {
 function checkVipStatus() {
   const isVip = isVipMember();
   const vipText = document.getElementById('vipStatusText');
+  const headerVipBtn = document.getElementById('headerVipBtn');
   if (vipText) {
-    vipText.textContent = isVip ? 'VIP ATIVO' : 'VIP ATIVO';
+    vipText.textContent = isVip ? 'VIP ATIVO' : 'SEJA VIP';
+  }
+  if (headerVipBtn) {
+    if (isVip) {
+      headerVipBtn.classList.add('is-vip');
+    } else {
+      headerVipBtn.classList.remove('is-vip');
+    }
   }
 }
 
@@ -679,11 +687,14 @@ function initOrUpdatePlayer(videoId) {
           videoId: videoId,
           playerVars: {
             autoplay: 1,
-            controls: 1,
+            controls: 0,
             modestbranding: 1,
             rel: 0,
             playsinline: 1,
-            enablejsapi: 1
+            enablejsapi: 1,
+            iv_load_policy: 3,
+            disablekb: 1,
+            fs: 0
           },
           events: {
             onReady: onPlayerReady,
@@ -695,6 +706,13 @@ function initOrUpdatePlayer(videoId) {
         ytPlayer.loadVideoById(videoId);
         ytPlayer.playVideo();
       }
+
+      // Garante que o preloader suma após no máximo 3.5s
+      setTimeout(() => {
+        const pre = document.getElementById('playerPreloader');
+        if (pre) pre.classList.add('hidden');
+      }, 3500);
+
       return;
     } catch (e) {
       console.warn('Erro ao instanciar YT.Player, usando fallback:', e);
@@ -710,21 +728,32 @@ function initOrUpdatePlayer(videoId) {
 
   // Fallback 100% garantido: Iframe direto caso a API externa demore ou seja bloqueada
   playerInitAttempts = 0;
-  holder.innerHTML = `<iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&playsinline=1&rel=0&modestbranding=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border:none; width:100%; height:100%;"></iframe>`;
+  holder.innerHTML = `<iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&playsinline=1&rel=0&modestbranding=1&controls=0&iv_load_policy=3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border:none; width:100%; height:100%;"></iframe>`;
   hidePaywall();
+
+  setTimeout(() => {
+    const pre = document.getElementById('playerPreloader');
+    if (pre) pre.classList.add('hidden');
+  }, 2200);
 }
 
 function onPlayerReady(event) {
   event.target.playVideo();
   startProgressTracker();
+  setTimeout(() => {
+    const pre = document.getElementById('playerPreloader');
+    if (pre) pre.classList.add('hidden');
+  }, 1200);
 }
 
 function onPlayerStateChange(event) {
   const centerIcon = document.getElementById('centerPlayIcon');
+  const preloader = document.getElementById('playerPreloader');
 
   if (event.data === YT.PlayerState.PLAYING) {
     isPlaying = true;
     hidePaywall();
+    if (preloader) preloader.classList.add('hidden');
     if (centerIcon) {
       centerIcon.innerHTML = '<rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect>';
     }
@@ -766,6 +795,9 @@ function openSeriesPlayer(seriesId, episodeIndex = 0) {
 
   hidePaywall();
 
+  const preloader = document.getElementById('playerPreloader');
+  if (preloader) preloader.classList.remove('hidden');
+
   const videoId = currentEp?.videoId || FALLBACK_STREAM_IDS[0];
   initOrUpdatePlayer(videoId);
   showControlsBriefly();
@@ -774,10 +806,12 @@ function openSeriesPlayer(seriesId, episodeIndex = 0) {
 function closePlayerModal() {
   exitFullScreenIfActive();
   const modal = document.getElementById('playerModal');
-  modal.classList.remove('active');
+  if (modal) modal.classList.remove('active');
   if (ytPlayer && ytPlayer.stopVideo) {
-    ytPlayer.stopVideo();
+    try { ytPlayer.stopVideo(); } catch (e) {}
   }
+  const preloader = document.getElementById('playerPreloader');
+  if (preloader) preloader.classList.remove('hidden');
   stopProgressTracker();
 }
 
