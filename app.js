@@ -529,6 +529,8 @@ function clearGlobalSearch() {
 }
 
 // ─── CARROSSEL HERO ──────────────────────────────────────────────────────────
+let heroJustSwiped = false;
+
 function initHeroCarousel() {
   switchHeroSlide(0);
   startHeroTimer();
@@ -537,7 +539,60 @@ function initHeroCarousel() {
   if (heroCard) {
     heroCard.addEventListener('mouseenter', stopHeroTimer);
     heroCard.addEventListener('mouseleave', startHeroTimer);
-    heroCard.addEventListener('touchstart', stopHeroTimer, { passive: true });
+
+    // Suporte completo a gestos touch (Arrastar com o dedo no celular)
+    let touchStartX = 0;
+    let touchStartY = 0;
+    let touchEndX = 0;
+    let touchEndY = 0;
+    let isTouchActive = false;
+
+    heroCard.addEventListener('touchstart', (e) => {
+      stopHeroTimer();
+      if (e.touches && e.touches.length > 0) {
+        touchStartX = e.touches[0].clientX;
+        touchStartY = e.touches[0].clientY;
+        touchEndX = touchStartX;
+        touchEndY = touchStartY;
+        isTouchActive = true;
+      }
+    }, { passive: true });
+
+    heroCard.addEventListener('touchmove', (e) => {
+      if (!isTouchActive || !e.touches || e.touches.length === 0) return;
+      touchEndX = e.touches[0].clientX;
+      touchEndY = e.touches[0].clientY;
+
+      const deltaX = touchEndX - touchStartX;
+      const deltaY = touchEndY - touchStartY;
+
+      // Se o movimento for predominantemente horizontal, previne scroll vertical durante o arrasto
+      if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > 10) {
+        if (e.cancelable) e.preventDefault();
+      }
+    }, { passive: false });
+
+    heroCard.addEventListener('touchend', () => {
+      if (!isTouchActive) return;
+      isTouchActive = false;
+
+      const deltaX = touchEndX - touchStartX;
+      const deltaY = touchEndY - touchStartY;
+      const threshold = 35; // Distância mínima para validar arrasto
+
+      if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > threshold) {
+        heroJustSwiped = true;
+        setTimeout(() => { heroJustSwiped = false; }, 400);
+
+        if (deltaX < 0) {
+          nextHeroSlide(); // Arrastou para a esquerda -> Próximo
+        } else {
+          prevHeroSlide(); // Arrastou para a direita -> Anterior
+        }
+      }
+
+      startHeroTimer();
+    }, { passive: true });
   }
 }
 
@@ -619,6 +674,10 @@ function prevHeroSlide() {
 }
 
 function playCurrentHero() {
+  if (heroJustSwiped) {
+    heroJustSwiped = false;
+    return;
+  }
   const currentSlide = HERO_SLIDES[currentHeroIdx];
   const targetItem = NOVELAS_CATALOG.find(c => c.id === currentSlide.id) || NOVELAS_CATALOG[0];
   openSeriesPlayer(targetItem.id, 0);
@@ -630,15 +689,23 @@ function isVipMember() {
 }
 
 function checkVipStatus() {
+  const isVip = isVipMember();
   const vipBtn = document.getElementById('headerVipBtn');
   const vipText = document.getElementById('vipStatusText');
 
   if (vipText) {
-    vipText.textContent = 'VIP ATIVO';
+    vipText.textContent = isVip ? 'VIP ATIVO' : 'SEJA VIP';
   }
-  if (vipBtn && isVipMember()) {
-    vipBtn.style.background = 'linear-gradient(135deg, #22c55e, #16a34a)';
-    vipBtn.style.boxShadow = '0 0 15px rgba(34, 197, 94, 0.4)';
+  if (vipBtn) {
+    if (isVip) {
+      vipBtn.classList.add('is-vip');
+      vipBtn.style.background = 'linear-gradient(135deg, #22c55e, #16a34a)';
+      vipBtn.style.boxShadow = '0 0 15px rgba(34, 197, 94, 0.4)';
+    } else {
+      vipBtn.classList.remove('is-vip');
+      vipBtn.style.background = '';
+      vipBtn.style.boxShadow = '';
+    }
   }
 }
 
