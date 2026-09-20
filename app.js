@@ -32,7 +32,7 @@ const HERO_SLIDES = [
     glowColor: 'rgba(239, 68, 68, 0.45)',
     title: 'Pássaro Madrugador (Erkenci Kuş) — Completa Dublada',
     desc: 'O maior fenômeno das novelas turcas! A paixão proibida e divertida entre Sanem e Can Divit em Istambul, 100% dublado em alta definição.',
-    cover: 'covers/turca-1.jpg',
+    cover: 'https://i.ytimg.com/vi/JHd1bRSSm-I/hqdefault.jpg',
     btnText: 'Assistir Temporada 1'
   },
   {
@@ -43,7 +43,7 @@ const HERO_SLIDES = [
     glowColor: 'rgba(236, 72, 153, 0.45)',
     title: 'Pousando no Amor (Crash Landing on You)',
     desc: 'O dorama mais premiado e amado do mundo! O romance arrebatador entre Yoon Se-ri e o capitão Ri Jeong-hyeok dublado em Full HD.',
-    cover: 'covers/dorama-1.jpg',
+    cover: 'https://i.ytimg.com/vi/f954W8xAUhU/hqdefault.jpg',
     btnText: 'Assistir Capítulo 1 Grátis'
   },
   {
@@ -54,7 +54,7 @@ const HERO_SLIDES = [
     glowColor: 'rgba(16, 185, 129, 0.45)',
     title: 'A Usurpadora — Paola Bracho e Paulina Martins',
     desc: 'A vilã mais icônica da história da teledramaturgia! A troca de identidade entre as gêmeas que parou o Brasil, com imagem remasterizada.',
-    cover: 'covers/mexicana-1.jpg',
+    cover: 'https://i.ytimg.com/vi/95_a4Mv94_E/hqdefault.jpg',
     btnText: 'Assistir Capítulo 1 Grátis'
   },
   {
@@ -65,7 +65,7 @@ const HERO_SLIDES = [
     glowColor: 'rgba(239, 68, 68, 0.45)',
     title: 'Será Isso Amor? (Sen Çal Kapımı) — Dublada',
     desc: 'O romance irresistível entre Eda Yildiz e Serkan Bolat que explodiu no mundo inteiro. Todos os episódios completos sem cortes.',
-    cover: 'covers/turca-4.jpg',
+    cover: 'https://i.ytimg.com/vi/TxVvnCRmUUs/hqdefault.jpg',
     btnText: 'Assistir Agora'
   }
 ];
@@ -563,7 +563,7 @@ function switchHeroSlide(idx) {
     }
     if (img) {
       img.src = slide.cover;
-      img.onerror = () => { img.src = `https://i.ytimg.com/vi/${slide.cover.split('/')[4]}/hqdefault.jpg`; };
+      img.onerror = () => { img.src = 'https://i.ytimg.com/vi/IPeKoGSaAqY/hqdefault.jpg'; };
     }
     if (badge) {
       badge.textContent = slide.badgeText;
@@ -654,38 +654,57 @@ function onPlayerError(event) {
 window.onYouTubeIframeAPIReady = function() {
   ytReady = true;
 };
+if (typeof YT !== 'undefined' && YT.loaded) {
+  ytReady = true;
+}
 
+let playerInitAttempts = 0;
 function initOrUpdatePlayer(videoId) {
-  if (!ytReady || typeof YT === 'undefined') {
-    setTimeout(() => initOrUpdatePlayer(videoId), 400);
+  const holder = document.getElementById('youtubePlayerHolder');
+  if (!holder) return;
+
+  // Se a API oficial do YouTube estiver disponível:
+  if (typeof YT !== 'undefined' && YT.Player && (ytReady || YT.loaded)) {
+    playerInitAttempts = 0;
+    try {
+      if (!ytPlayer) {
+        ytPlayer = new YT.Player('youtubePlayerHolder', {
+          videoId: videoId,
+          playerVars: {
+            autoplay: 1,
+            controls: 1,
+            modestbranding: 1,
+            rel: 0,
+            playsinline: 1,
+            enablejsapi: 1
+          },
+          events: {
+            onReady: onPlayerReady,
+            onStateChange: onPlayerStateChange,
+            onError: onPlayerError
+          }
+        });
+      } else {
+        ytPlayer.loadVideoById(videoId);
+        ytPlayer.playVideo();
+      }
+      return;
+    } catch (e) {
+      console.warn('Erro ao instanciar YT.Player, usando fallback:', e);
+    }
+  }
+
+  // Se ainda estiver carregando a API, tenta mais 2 vezes (máximo 600ms):
+  if (playerInitAttempts < 2 && typeof YT === 'undefined') {
+    playerInitAttempts++;
+    setTimeout(() => initOrUpdatePlayer(videoId), 300);
     return;
   }
 
-  if (!ytPlayer) {
-    ytPlayer = new YT.Player('youtubePlayerHolder', {
-      videoId: videoId,
-      playerVars: {
-        autoplay: 1,
-        controls: 0,
-        modestbranding: 1,
-        rel: 0,
-        showinfo: 0,
-        iv_load_policy: 3,
-        disablekb: 1,
-        fs: 0,
-        playsinline: 1,
-        enablejsapi: 1
-      },
-      events: {
-        onReady: onPlayerReady,
-        onStateChange: onPlayerStateChange,
-        onError: onPlayerError
-      }
-    });
-  } else {
-    ytPlayer.loadVideoById(videoId);
-    ytPlayer.playVideo();
-  }
+  // Fallback 100% garantido: Iframe direto caso a API externa demore ou seja bloqueada
+  playerInitAttempts = 0;
+  holder.innerHTML = `<iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&playsinline=1&rel=0&modestbranding=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border:none; width:100%; height:100%;"></iframe>`;
+  hidePaywall();
 }
 
 function onPlayerReady(event) {
