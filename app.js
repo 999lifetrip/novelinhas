@@ -850,6 +850,19 @@ function openSeriesPlayer(seriesId, episodeIndex = 0) {
   renderEpisodesRichList();
   renderSeriesDetails();
 
+  // Marca body como player aberto e esconde o chat da Dona Sirlene durante o vídeo
+  document.body.classList.add('player-open');
+  if (typeof window.closeDonaSirleneChat === 'function') {
+    window.closeDonaSirleneChat();
+  }
+  if (typeof window.dismissInviteBubble === 'function') {
+    window.dismissInviteBubble();
+  }
+  const dsRoot = document.getElementById('donaSirleneChatRoot');
+  if (dsRoot) {
+    dsRoot.style.setProperty('display', 'none', 'important');
+  }
+
   // Exibe a modal
   modal.classList.add('active');
 
@@ -872,8 +885,16 @@ function openSeriesPlayer(seriesId, episodeIndex = 0) {
 
 function closePlayerModal() {
   exitFullScreenIfActive();
+  document.body.classList.remove('player-open');
   const modal = document.getElementById('playerModal');
   if (modal) modal.classList.remove('active');
+  
+  // Restaura o widget da Dona Sirlene ao fechar o player
+  const dsRoot = document.getElementById('donaSirleneChatRoot');
+  if (dsRoot) {
+    dsRoot.style.removeProperty('display');
+  }
+
   if (ytPlayer && ytPlayer.stopVideo) {
     try { ytPlayer.stopVideo(); } catch (e) {}
   }
