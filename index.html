@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   
   <!-- CSS Stylesheet -->
-  <link rel="stylesheet" href="style.css?v=20260920_v3" />
+  <link rel="stylesheet" href="style.css?v=20260920_v6" />
 </head>
 <body>
 
@@ -36,7 +36,7 @@
       <div class="header-actions">
         <button id="headerVipBtn" class="vip-pill-btn" onclick="openPixModal()">
           <span>👑</span>
-          <span id="vipStatusText">VIP ATIVO</span>
+          <span id="vipStatusText">SEJA VIP</span>
         </button>
         <button class="header-btn" onclick="openDonaSirleneChat()" title="Atendente Online - Dona Sirlene">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -470,23 +470,40 @@
   <div class="player-modal" id="playerModal">
     <!-- Topbar do Player -->
     <div class="player-topbar">
-      <button class="btn-back-player" onclick="closePlayerModal()" title="Fechar Player">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-          <line x1="19" y1="12" x2="5" y2="12"></line>
-          <polyline points="12 19 5 12 12 5"></polyline>
-        </svg>
+      <button class="btn-back-player" onclick="closePlayerModal()" title="Fechar Player e Voltar ao Início" aria-label="Fechar">
+        <span style="font-size: 1.1rem; font-weight: 800; line-height: 1;">✕</span>
+        <span style="font-size: 0.78rem; font-weight: 700; margin-left: 4px;">Fechar</span>
       </button>
       <div class="player-title-info">
         <div class="player-series-title" id="playerSeriesTitle">Carregando...</div>
         <div class="player-ep-name" id="playerEpName">Capítulo 01</div>
       </div>
-      <button class="vip-pill-btn" onclick="openPixModal()" style="font-size:0.75rem; padding:6px 14px;">
-        👑 VIP R$ 19,90
-      </button>
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <button class="vip-pill-btn" onclick="openPixModal()" style="font-size:0.75rem; padding:6px 14px;">
+          👑 VIP R$ 19,90
+        </button>
+        <button class="btn-topbar-close-icon" onclick="closePlayerModal()" title="Fechar Player" aria-label="Fechar">
+          ✕
+        </button>
+      </div>
     </div>
 
     <!-- Área de Vídeo Camuflada -->
     <div class="video-stealth-wrapper" id="videoStealthWrapper">
+      <!-- Botão Fechar Flutuante Sempre Visível no Player e na Tela Cheia -->
+      <button class="btn-player-close-floating" id="btnPlayerCloseFloating" onclick="closePlayerModal()" title="Fechar Vídeo e Voltar" aria-label="Fechar Vídeo">
+        ✕
+      </button>
+
+      <!-- Preloader Cinema Stealth (Cobre o início do YouTube) -->
+      <div class="player-preloader" id="playerPreloader">
+        <div class="stealth-spinner"></div>
+        <div class="preloader-text-box">
+          <span class="preloader-brand">NOVELINHAS VIP</span>
+          <span class="preloader-status">Iniciando transmissão segura em Alta Definição...</span>
+        </div>
+      </div>
+
       <!-- Container Iframe -->
       <div class="stealth-iframe-container" id="stealthIframeContainer">
         <div id="youtubePlayerHolder"></div>
@@ -722,8 +739,8 @@
   <!-- YouTube IFrame API Script -->
   <script src="https://www.youtube.com/iframe_api"></script>
   
-  <script src="catalog.js?v=20260920_v5"></script>
-  <script src="app.js?v=20260920_v5"></script>
-  <script src="chat-agent.js?v=20260920_v5"></script>
+  <script src="catalog.js?v=20260920_v6"></script>
+  <script src="app.js?v=20260920_v6"></script>
+  <script src="chat-agent.js?v=20260920_v6"></script>
 </body>
 </html>
