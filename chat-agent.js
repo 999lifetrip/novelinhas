@@ -15,7 +15,7 @@
     pixType: 'CPF',
     pixName: 'Roseli (Assistente)',
     pixBank: 'Mercado Pago',
-    whatsappUrl: 'https://wa.me/554189031232?text=Oi%20Dona%20Sirlene,%20vim%20pelo%20chat%20do%20site%20das%20Novelinhas!'
+    whatsappUrl: 'https://wa.me/554195993007?text=Oi%20Dona%20Sirlene,%20vim%20pelo%20chat%20do%20site%20das%20Novelinhas!'
   };
 
   let chatHistory = [];
@@ -257,7 +257,7 @@
 
   window.openWhatsAppFallback = function (customMsg) {
     if (customMsg && typeof customMsg === 'string') {
-      window.open(`https://wa.me/554189031232?text=${encodeURIComponent(customMsg)}`, '_blank');
+      window.open(`https://wa.me/554195993007?text=${encodeURIComponent(customMsg)}`, '_blank');
     } else {
       window.open(AGENT_CONFIG.whatsappUrl, '_blank');
     }
