@@ -45,7 +45,7 @@
         </div>
         <div class="ds-invite-text-box">
           <span class="ds-invite-author">Dona Sirlene:</span>
-          <p class="ds-invite-msg">🚨 <strong>Promoção VIP por R$ 19,90!</strong> Assista tudo na Smart TV e Celular sem mensalidade! Clica aqui que te libero o acesso agora! 🥰👑</p>
+          <p class="ds-invite-msg">🚨 <strong>Promoção VIP por R$ 19,90!</strong> Assista a todas as novelas e doramas sem anúncios e sem mensalidade! Clica aqui que te libero o acesso agora! 🥰👑</p>
         </div>
       </div>
 
@@ -113,9 +113,8 @@
         <!-- Pílulas de Resposta Rápida (Quick Replies) -->
         <div class="ds-quick-chips" id="dsQuickChips">
           <button class="ds-chip vip-confirm" onclick="sendQuickReply('Quero o Plano VIP Vitalício (R$ 19,90)! Pode me mandar a chave Pix?')">⭐ Quero o VIP de R$ 19,90 (Chave Pix)</button>
-          <button class="ds-chip" onclick="sendQuickReply('Funciona na Smart TV? Como faço para assistir?')">📺 Passa na Smart TV?</button>
-          <button class="ds-chip" onclick="sendQuickReply('Quero o Plano Básico de R$ 10,00')">💰 Quero o de R$ 10,00</button>
           <button class="ds-chip" onclick="sendQuickReply('Já fiz o Pix! Pode liberar meu Acesso VIP agora?')">✅ Já fiz o Pix! Liberar VIP</button>
+          <button class="ds-chip" onclick="openWhatsAppFallback('Oi Dona Sirlene! Vim pelo chat do site!')">📲 Falar no WhatsApp</button>
         </div>
 
         <!-- Input Footer -->
@@ -169,7 +168,7 @@
     if (chatHistory.length === 0) {
       // Mensagem inicial de fechamento da Dona Sirlene
       addAgentMessage(
-        `Oi, meu amor! Que bom que você veio falar comigo! 🥰 Sou a **Dona Sirlene**.\n\nOlha só, eu consegui segurar para você hoje a nossa **Promoção Especial do Acesso VIP Vitalício** de R$ 59,90 por **apenas R$ 19,90 no Pix** (taxa única, sem mensalidade nenhuma!).\n\n👑 **Tudo liberado para você maratonar hoje mesmo:**\n• Mais de **10.000 capítulos** de novelas turcas, mexicanas e doramas dublados em HD\n• Acesso liberado no celular, tablet e na sua **Smart TV**\n• Sem anúncios chatos e sem travamentos\n• Liberação imediata e automática no Pix!\n\nQuer que eu já te mande a chave Pix para você liberar seu acesso agora mesmo, querida? É só clicar no botão aqui embaixo! 👇✨`,
+        `Oi, meu amor! Que bom que você veio falar comigo! 🥰 Sou a **Dona Sirlene**.\n\nOlha só, eu consegui segurar para você hoje a nossa **Promoção Especial do Acesso VIP Vitalício** de R$ 59,90 por **apenas R$ 19,90 no Pix** (taxa única, sem mensalidade nenhuma!).\n\n👑 **Tudo liberado para você maratonar hoje mesmo:**\n• Mais de **10.000 capítulos** de novelas turcas, mexicanas e doramas dublados em HD\n• Sem anúncios chatos e sem travamentos\n• Liberação imediata e vitalícia no Pix!\n\nQuer que eu já te mande a chave Pix para você liberar seu acesso agora mesmo, querida? É só clicar no botão aqui embaixo! 👇✨`,
         null,
         false
       );
@@ -256,8 +255,12 @@
     }
   };
 
-  window.openWhatsAppFallback = function () {
-    window.open(AGENT_CONFIG.whatsappUrl, '_blank');
+  window.openWhatsAppFallback = function (customMsg) {
+    if (customMsg && typeof customMsg === 'string') {
+      window.open(`https://wa.me/554189031232?text=${encodeURIComponent(customMsg)}`, '_blank');
+    } else {
+      window.open(AGENT_CONFIG.whatsappUrl, '_blank');
+    }
   };
 
   // ─── ENVIO E PROCESSAMENTO DE MENSAGENS ──────────────────────────────────────
@@ -363,11 +366,28 @@
     } else {
       let extraCardHtml = '';
 
-      // Card de Pix caso solicitado ou indicado pela IA
+      // Card de Pix caso solicitado ou indicado pela IA (sempre o VIP 19,90)
       if (msg.meta && (msg.meta.action === 'show_pix' || msg.meta.action === 'pix')) {
-        const amount = msg.meta.pix?.amount || (msg.meta.plan === 'basico' ? '10,00' : '19,90');
-        const planName = msg.meta.plan === 'basico' ? 'Plano Básico (3.000 Novelas)' : 'Plano VIP Vitalício (+10.000 Novelas + TV)';
+        const amount = msg.meta.pix?.amount || '19,90';
+        const planName = 'Plano VIP Vitalício (+10.000 Capítulos Completos)';
         extraCardHtml = renderPixCardHtml(amount, planName);
+      }
+
+      // Card de WhatsApp para quem pergunta pelo plano de 10
+      if (msg.meta && msg.meta.action === 'whatsapp_only_10') {
+        extraCardHtml = `
+          <div class="ds-pix-card" style="border-color: rgba(34, 197, 94, 0.4); margin-top: 10px;">
+            <div class="ds-pix-badge" style="background: rgba(34, 197, 94, 0.2); color: #22c55e;">📲 ATENDIMENTO EXCLUSIVO WHATSAPP</div>
+            <h5 class="ds-pix-plan-name" style="margin-top: 6px;">Plano Básico R$ 10,00</h5>
+            <p style="font-size: 0.8rem; color: #94a3b8; margin: 8px 0 12px; line-height: 1.4;">Para tirar dúvidas e contratar o plano básico de R$ 10,00, fale comigo diretamente no WhatsApp:</p>
+            <button class="ds-pix-whatsapp-proof-btn" onclick="openWhatsAppFallback('Oi Dona Sirlene! Vim pelo site e quero saber mais sobre o plano de R$ 10')">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z"/>
+              </svg>
+              <span>📲 FALAR COM DONA SIRLENE NO WHATSAPP</span>
+            </button>
+          </div>
+        `;
       }
 
       // Card de VIP Ativado com Sucesso
@@ -606,19 +626,24 @@
         `Que maravilha, flor! 🥰 Para proteger seu acesso e mantermos nosso sistema 100% seguro contra fraudes, por favor me envie a foto ou print do seu comprovante no WhatsApp!\n\nAssim que eu conferir (é na hora!), te passo seu **Código VIP exclusivo** para liberar tudo aqui no site! Clique no botão abaixo para me mandar:`,
         { action: 'show_pix', plan: 'vip' }
       );
-    } else if (lower.includes('tv') || lower.includes('smart')) {
+    } else if (lower.includes('10') || lower.includes('dez') || lower.includes('básico') || lower.includes('basico')) {
       addAgentMessage(
-        `Oi meu bem! Funciona perfeitamente na sua Smart TV sim! 📺✨ Nós ensinamos todo o passo a passo com suporte exclusivo e carinho no nosso **Plano VIP de R$ 19,90** (pagamento único sem mensalidades). No de R$ 10 é só para celular. A maioria das meninas escolhe o VIP justamente para ver na TV bem confortável! Quer garantir o seu VIP agora, querida? 🥰`,
+        `Oi meu amor! O plano básico de R$ 10,00 é tratado **exclusivamente direto pelo nosso WhatsApp**! 📲\n\nClica no botão verde abaixo para me chamar no WhatsApp que eu te passo todos os detalhes por lá com o maior carinho! 🥰`,
+        { action: 'whatsapp_only_10' }
+      );
+    } else if (lower.includes('tv') || lower.includes('smart') || lower.includes('televis')) {
+      addAgentMessage(
+        `Oi meu bem! Funciona perfeitamente na sua Smart TV sim! 📺✨ Nós ensinamos todo o passo a passo com suporte exclusivo no nosso **Plano VIP Vitalício de R$ 19,90** (pagamento único sem mensalidade). Quer garantir o seu VIP agora, querida? 🥰`,
         { action: 'show_pix', plan: 'vip' }
       );
-    } else if (/(pix|pagar|comprar|plano|quanto custa|valor)/i.test(lower)) {
+    } else if (/(pix|pagar|comprar|plano|quanto custa|valor|preço|preco)/i.test(lower)) {
       addAgentMessage(
-        `Com certeza, meu anjo! Nosso **Plano VIP Vitalício** com mais de 10.000 episódios e suporte para TV é só **R$ 19,90** (ou R$ 10,00 no plano básico). Você paga uma única vez e nunca mais tem mensalidade! 🌸\n\nAqui está nossa chave Pix oficial para você liberar na hora:\n🔑 **${AGENT_CONFIG.pixKey}** (CPF)\n👤 Titular: **${AGENT_CONFIG.pixName}** (${AGENT_CONFIG.pixBank})`,
+        `Com certeza, meu anjo! O nosso **Plano VIP Vitalício** com mais de 10.000 episódios completos sem anúncios está por apenas **R$ 19,90 no Pix**! Você paga uma única vez e nunca mais tem mensalidade! 🌸\n\nAqui está a nossa chave Pix oficial para você liberar na hora:\n🔑 **${AGENT_CONFIG.pixKey}** (CPF)\n👤 Titular: **${AGENT_CONFIG.pixName}** (${AGENT_CONFIG.pixBank})`,
         { action: 'show_pix', plan: 'vip' }
       );
     } else {
       addAgentMessage(
-        `Oi meu coração! 🥰 Eu sou a Dona Sirlene e estou aqui para te ajudar a assistir às melhores novelas turcas dubladas, doramas e minisséries sem travas e sem anúncios!\n\nTemos o plano básico por apenas R$ 10,00 e o nosso famoso **Plano VIP Vitalício por R$ 19,90** com suporte completo para Smart TV! Como posso te ajudar hoje, flor?`,
+        `Oi meu coração! 🥰 Eu sou a Dona Sirlene e estou aqui para te ajudar a assistir às melhores novelas turcas dubladas, doramas e minisséries sem travas e sem anúncios!\n\nO nosso **Plano VIP Vitalício** está em valor promocional de apenas **R$ 19,90 no Pix** (taxa única, sem mensalidade nenhuma!). Como posso te ajudar hoje, flor?`,
         null
       );
     }
