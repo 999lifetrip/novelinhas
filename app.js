@@ -832,11 +832,37 @@ function onPlayerStateChange(event) {
   }
 }
 
+let currentSeasonNum = 1;
+
+function getSeriesSeasons(series) {
+  if (!series) return [];
+  if (series.seasons && Array.isArray(series.seasons) && series.seasons.length > 0) {
+    return series.seasons;
+  }
+  return [
+    {
+      num: 1,
+      label: 'Temporada 1',
+      episodes: series.episodes || [],
+      startIndex: 0
+    }
+  ];
+}
+
+function switchSeason(seasonNum) {
+  currentSeasonNum = seasonNum;
+  renderEpisodesRichList();
+}
+
 // Abre o player para a série selecionada
 function openSeriesPlayer(seriesId, episodeIndex = 0) {
   currentSeries = NOVELAS_CATALOG.find(s => s.id === seriesId);
   if (!currentSeries) return;
   currentEpisodeIndex = episodeIndex;
+
+  const seasons = getSeriesSeasons(currentSeries);
+  const foundSeason = seasons.find(s => episodeIndex >= s.startIndex && episodeIndex < (s.startIndex + s.episodes.length));
+  currentSeasonNum = foundSeason ? foundSeason.num : 1;
 
   const modal = document.getElementById('playerModal');
   const titleEl = document.getElementById('playerSeriesTitle');
@@ -850,17 +876,13 @@ function openSeriesPlayer(seriesId, episodeIndex = 0) {
   renderEpisodesRichList();
   renderSeriesDetails();
 
-  // Marca body como player aberto e esconde o chat da Dona Sirlene durante o vídeo
+  // Marca body como player aberto (esconde botão flutuante para não atrapalhar o vídeo)
   document.body.classList.add('player-open');
   if (typeof window.closeDonaSirleneChat === 'function') {
     window.closeDonaSirleneChat();
   }
   if (typeof window.dismissInviteBubble === 'function') {
     window.dismissInviteBubble();
-  }
-  const dsRoot = document.getElementById('donaSirleneChatRoot');
-  if (dsRoot) {
-    dsRoot.style.setProperty('display', 'none', 'important');
   }
 
   // Exibe a modal
@@ -888,12 +910,6 @@ function closePlayerModal() {
   document.body.classList.remove('player-open');
   const modal = document.getElementById('playerModal');
   if (modal) modal.classList.remove('active');
-  
-  // Restaura o widget da Dona Sirlene ao fechar o player
-  const dsRoot = document.getElementById('donaSirleneChatRoot');
-  if (dsRoot) {
-    dsRoot.style.removeProperty('display');
-  }
 
   if (ytPlayer && ytPlayer.stopVideo) {
     try { ytPlayer.stopVideo(); } catch (e) {}
@@ -926,22 +942,43 @@ function switchPlayerTab(tabKey) {
 function renderEpisodesRichList() {
   const container = document.getElementById('episodesRichList');
   const countSpan = document.getElementById('episodesTotalCount');
+  const seasonRow = document.getElementById('episodesSeasonRow');
   if (!container || !currentSeries) return;
 
   const total = currentSeries.episodes.length;
   if (countSpan) countSpan.textContent = total;
 
+  const seasons = getSeriesSeasons(currentSeries);
+
+  // Renderiza seletor de temporadas
+  if (seasonRow) {
+    if (seasons.length > 1) {
+      seasonRow.style.display = 'flex';
+      seasonRow.innerHTML = seasons.map(s => `
+        <button class="season-pill-btn ${s.num === currentSeasonNum ? 'active' : ''}" onclick="switchSeason(${s.num})">
+          <span>${s.label}</span>
+          <span style="opacity: 0.75; font-size: 0.72rem;">(${s.episodes.length} caps)</span>
+        </button>
+      `).join('');
+    } else {
+      seasonRow.style.display = 'none';
+      seasonRow.innerHTML = '';
+    }
+  }
+
+  const activeSeason = seasons.find(s => s.num === currentSeasonNum) || seasons[0];
   const isVip = isVipMember();
 
-  container.innerHTML = currentSeries.episodes.map((ep, idx) => {
-    const isFree = idx === 0;
+  container.innerHTML = activeSeason.episodes.map((ep, localIdx) => {
+    const globalIdx = (activeSeason.startIndex || 0) + localIdx;
+    const isFree = globalIdx === 0;
     const isLocked = !isFree && !isVip;
-    const isActive = idx === currentEpisodeIndex;
+    const isActive = globalIdx === currentEpisodeIndex;
 
     return `
-      <div class="ep-card-item ${isActive ? 'active' : ''}" onclick="selectEpisode(${idx})">
+      <div class="ep-card-item ${isActive ? 'active' : ''}" onclick="selectEpisode(${globalIdx})">
         <div class="ep-thumb-box">
-          <img src="https://i.ytimg.com/vi/${ep.videoId}/mqdefault.jpg" alt="${ep.title}" loading="lazy" onerror="this.src='https://i.ytimg.com/vi/${FALLBACK_STREAM_IDS[idx % FALLBACK_STREAM_IDS.length]}/mqdefault.jpg'" />
+          <img src="https://i.ytimg.com/vi/${ep.videoId}/mqdefault.jpg" alt="${ep.title}" loading="lazy" onerror="this.src='https://i.ytimg.com/vi/${FALLBACK_STREAM_IDS[globalIdx % FALLBACK_STREAM_IDS.length]}/mqdefault.jpg'" />
           <span class="ep-thumb-duration">${ep.duration || '42 min'}</span>
         </div>
         <div class="ep-card-info">
