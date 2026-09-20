@@ -240,6 +240,9 @@
   };
 
   function showInviteBubble() {
+    if (document.body.classList.contains('player-open') || document.getElementById('playerModal')?.classList.contains('active')) {
+      return;
+    }
     const bubble = document.getElementById('dsChatInviteBubble');
     if (bubble) {
       inviteShown = true;
