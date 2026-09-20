@@ -43913,8 +43913,8 @@ const NOVELAS_CATALOG = [
 
 const NOVELAS_CONFIG = {
   siteName: "Novelinhas VIP",
-  whatsappNumber: "554189031232",
-  supportLink: "https://wa.me/554189031232?text=Ol%C3%A1%21+Quero+tirar+d%C3%BAvidas+sobre+o+Acesso+VIP+das+Novelinhas",
+  whatsappNumber: "554195993007",
+  supportLink: "https://wa.me/554195993007?text=Ol%C3%A1%21+Quero+tirar+d%C3%BAvidas+sobre+o+Acesso+VIP+das+Novelinhas",
   pixKey: "975.956.249-91",
   pixPrice: "19,90"
 };
