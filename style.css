@@ -1619,10 +1619,9 @@ html, body {
   pointer-events: auto;
 }
 
-/* Esconde 100% o chat da Dona Sirlene e balão de convite enquanto assiste à novela */
-body.player-open #donaSirleneChatRoot,
-.player-modal.active ~ #donaSirleneChatRoot,
-#playerModal.active ~ #donaSirleneChatRoot {
+/* Esconde o botão flutuante e balãozinho da Dona Sirlene enquanto assiste à novela, permitindo abrir chat se solicitado */
+body.player-open .ds-floating-trigger,
+body.player-open .ds-chat-invite-bubble {
   display: none !important;
   opacity: 0 !important;
   pointer-events: none !important;
@@ -1630,85 +1629,51 @@ body.player-open #donaSirleneChatRoot,
 }
 
 .player-topbar {
-  padding: 14px 24px;
+  padding: 10px 14px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.9) 0%, transparent 100%);
+  background: linear-gradient(to bottom, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.7) 70%, transparent 100%);
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   z-index: 220;
+  height: 54px;
+  box-sizing: border-box;
 }
 
 .btn-back-player {
-  padding: 8px 14px;
+  padding: 7px 12px;
   border-radius: var(--radius-pill);
   background: rgba(255, 255, 255, 0.16);
   backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.3);
   color: #ffffff;
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 6px;
   cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 700;
+  white-space: nowrap;
+  flex-shrink: 0;
   transition: transform 0.2s, background 0.2s;
 }
-.btn-back-player:hover {
-  background: rgba(239, 68, 68, 0.7);
-  transform: scale(1.04);
+.btn-back-player:hover,
+.btn-back-player:active {
+  background: rgba(239, 68, 68, 0.8);
+  transform: scale(1.03);
 }
 
 .btn-topbar-close-icon {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background: rgba(239, 68, 68, 0.25);
-  border: 1px solid rgba(239, 68, 68, 0.5);
-  color: #ffffff;
-  font-size: 16px;
-  font-weight: 800;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: transform 0.2s, background 0.2s;
-}
-.btn-topbar-close-icon:hover {
-  background: #ef4444;
-  transform: scale(1.08);
+  display: none !important;
 }
 
-/* Botão Fechar Flutuante Sempre Visível (inclusive na Tela Cheia) */
+/* Botão Fechar Flutuante desativado no topo para evitar colisão visual no mobile */
 .btn-player-close-floating {
-  position: absolute;
-  top: 14px;
-  right: 14px;
-  z-index: 9999999 !important;
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  background: rgba(15, 15, 20, 0.88);
-  border: 1.5px solid rgba(255, 255, 255, 0.45);
-  color: #ffffff;
-  font-size: 20px;
-  font-weight: 900;
-  display: flex !important;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8), 0 0 10px rgba(255, 255, 255, 0.2);
-  transition: transform 0.2s, background 0.2s, border-color 0.2s;
-  touch-action: manipulation;
-}
-.btn-player-close-floating:hover,
-.btn-player-close-floating:active {
-  transform: scale(1.08);
-  background: #ef4444;
-  border-color: #ffffff;
+  display: none !important;
 }
 
 /* Preloader Stealth Cinema (Esconde o carregamento do YouTube) */
@@ -1765,11 +1730,13 @@ body.player-open #donaSirleneChatRoot,
 }
 
 .player-title-info {
+  flex: 1;
+  min-width: 0;
+  padding: 0 10px;
   text-align: center;
-  max-width: 50%;
 }
 .player-series-title {
-  font-size: 1rem;
+  font-size: 0.88rem;
   font-weight: 800;
   color: #ffffff;
   white-space: nowrap;
@@ -1777,8 +1744,11 @@ body.player-open #donaSirleneChatRoot,
   text-overflow: ellipsis;
 }
 .player-ep-name {
-  font-size: 0.78rem;
+  font-size: 0.72rem;
   color: #94a3b8;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* Container do Vídeo */
@@ -1949,39 +1919,46 @@ body.player-open #donaSirleneChatRoot,
   position: absolute;
   inset: 0;
   z-index: 215;
-  background: rgba(6, 6, 12, 0.92);
-  backdrop-filter: blur(16px);
+  background: rgba(6, 6, 12, 0.96);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   display: none;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 24px;
+  justify-content: flex-start;
+  padding: 64px 18px 24px;
   text-align: center;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 .paywall-overlay.active {
   display: flex;
 }
 .paywall-lock-badge {
-  font-size: 2.4rem;
-  margin-bottom: 12px;
+  font-size: 2rem;
+  margin-bottom: 8px;
 }
 .paywall-heading {
   font-family: var(--font-display);
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: 900;
   color: #ffffff;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
+  line-height: 1.3;
 }
 .paywall-text {
-  font-size: 0.9rem;
+  font-size: 0.82rem;
   color: #cbd5e1;
-  max-width: 500px;
-  margin-bottom: 18px;
+  max-width: 480px;
+  margin-bottom: 14px;
+  line-height: 1.4;
 }
 .paywall-benefits-list {
   list-style: none;
-  margin-bottom: 22px;
+  margin-bottom: 16px;
   text-align: left;
+  max-width: 420px;
+  width: 100%;
 }
 .paywall-benefits-list li {
   font-size: 0.84rem;
@@ -2065,6 +2042,45 @@ body.player-open #donaSirleneChatRoot,
 }
 .player-tab-content.active {
   display: block;
+}
+
+/* ─── SELETOR DE TEMPORADAS INTERATIVO ─── */
+.episodes-season-row {
+  display: flex;
+  gap: 8px;
+  padding: 0 0 14px 0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.episodes-season-row::-webkit-scrollbar {
+  display: none;
+}
+.season-pill-btn {
+  padding: 7px 16px;
+  border-radius: var(--radius-pill, 9999px);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #cbd5e1;
+  font-size: 0.82rem;
+  font-weight: 700;
+  white-space: nowrap;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+}
+.season-pill-btn:hover {
+  background: rgba(255, 255, 255, 0.18);
+  color: #ffffff;
+}
+.season-pill-btn.active {
+  background: linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%);
+  border-color: rgba(255, 255, 255, 0.35);
+  color: #ffffff;
+  font-weight: 800;
+  box-shadow: 0 4px 15px rgba(236, 72, 153, 0.45);
 }
 
 /* Lista Rica de Episódios */
@@ -2166,9 +2182,10 @@ body.player-open #donaSirleneChatRoot,
 .modal-backdrop {
   position: fixed;
   inset: 0;
-  z-index: 300;
-  background: rgba(0, 0, 0, 0.85);
+  z-index: 100050;
+  background: rgba(0, 0, 0, 0.88);
   backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
   display: none;
   align-items: center;
   justify-content: center;
@@ -2668,7 +2685,7 @@ body.player-open #donaSirleneChatRoot,
   position: fixed;
   bottom: 24px;
   right: 24px;
-  z-index: 99990;
+  z-index: 100060;
   font-family: var(--font-main, 'Plus Jakarta Sans', sans-serif);
 }
 
