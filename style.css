@@ -166,8 +166,8 @@ html, body {
 .vip-pill-btn {
   padding: 5px 12px;
   border-radius: var(--radius-pill);
-  background: #16a34a;
-  border: 1px solid rgba(34, 197, 94, 0.4);
+  background: linear-gradient(135deg, #ec4899 0%, #f97316 100%);
+  border: 1px solid rgba(255, 255, 255, 0.25);
   color: #ffffff;
   font-weight: 800;
   font-size: 0.72rem;
@@ -176,13 +176,21 @@ html, body {
   display: flex;
   align-items: center;
   gap: 5px;
-  box-shadow: 0 0 12px rgba(34, 197, 94, 0.3);
-  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 0 14px rgba(236, 72, 153, 0.45);
+  transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
   white-space: nowrap;
   flex-shrink: 0;
 }
 .vip-pill-btn:hover {
   transform: scale(1.04);
+  box-shadow: 0 0 20px rgba(236, 72, 153, 0.65);
+}
+.vip-pill-btn.is-vip {
+  background: #16a34a;
+  border-color: rgba(34, 197, 94, 0.4);
+  box-shadow: 0 0 12px rgba(34, 197, 94, 0.3);
+}
+.vip-pill-btn.is-vip:hover {
   background: #22c55e;
 }
 
@@ -1611,22 +1619,130 @@ html, body {
 }
 
 .btn-back-player {
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 8px 14px;
+  border-radius: var(--radius-pill);
+  background: rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+}
+.btn-back-player:hover {
+  background: rgba(239, 68, 68, 0.7);
+  transform: scale(1.04);
+}
+
+.btn-topbar-close-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(239, 68, 68, 0.25);
+  border: 1px solid rgba(239, 68, 68, 0.5);
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 800;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+}
+.btn-topbar-close-icon:hover {
+  background: #ef4444;
+  transform: scale(1.08);
+}
+
+/* Botão Fechar Flutuante Sempre Visível (inclusive na Tela Cheia) */
+.btn-player-close-floating {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 9999999 !important;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(15, 15, 20, 0.88);
+  border: 1.5px solid rgba(255, 255, 255, 0.45);
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 900;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8), 0 0 10px rgba(255, 255, 255, 0.2);
+  transition: transform 0.2s, background 0.2s, border-color 0.2s;
+  touch-action: manipulation;
+}
+.btn-player-close-floating:hover,
+.btn-player-close-floating:active {
+  transform: scale(1.08);
+  background: #ef4444;
+  border-color: #ffffff;
+}
+
+/* Preloader Stealth Cinema (Esconde o carregamento do YouTube) */
+.player-preloader {
+  position: absolute;
+  inset: 0;
+  background: #080a10;
+  z-index: 204;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  pointer-events: none;
+}
+.player-preloader.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+.stealth-spinner {
+  width: 46px;
+  height: 46px;
+  border: 3.5px solid rgba(236, 72, 153, 0.2);
+  border-top-color: #ec4899;
+  border-right-color: #f97316;
+  border-radius: 50%;
+  animation: stealthSpin 0.75s linear infinite;
+}
+@keyframes stealthSpin {
+  to { transform: rotate(360deg); }
+}
+.preloader-text-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  text-align: center;
+  padding: 0 20px;
+}
+.preloader-brand {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  background: linear-gradient(135deg, #ec4899, #f97316);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.preloader-status {
+  font-size: 0.78rem;
+  color: #94a3b8;
+  font-weight: 500;
 }
 
 .player-title-info {
   text-align: center;
-  max-width: 60%;
+  max-width: 50%;
 }
 .player-series-title {
   font-size: 1rem;
@@ -1695,7 +1811,7 @@ html, body {
   width: 100%;
   height: 100%;
   border: none;
-  transform: scale(1.18);
+  transform: scale(1.22);
   transform-origin: center center;
 }
 
