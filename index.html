@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Novelinhas VIP — Doramas, Novelas Turcas, Mexicanas & Microdramas Dublados</title>
+  <meta name="description" content="A melhor plataforma de doramas em português, novelas turcas, mexicanas do SBT e minisséries virais. Mais de 200 produções completas e 12.000 episódios sem anúncios." />
+  
+  <!-- Google Fonts: Plus Jakarta Sans & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="style.css?v=prod1" />
+</head>
+<body>
+
+  <!-- Toast Notification -->
+  <div id="toastMsg" class="toast-msg">Mensagem</div>
+
+  <!-- APP SHELL STREAMING CONTAINER -->
+  <div class="app-container">
+
+    <!-- ─── HEADER ESTILO NOVELINHAS VIP ─── -->
+    <header class="app-header">
+      <div class="logo-area" onclick="switchMainTab('home')">
+        <div class="logo-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.5">
+            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+          </svg>
+        </div>
+        <div class="logo-text">NOVELI<span>NHAS</span></div>
+      </div>
+
+      <div class="header-actions">
+        <button id="headerVipBtn" class="vip-pill-btn" onclick="openPixModal()">
+          <span>👑</span>
+          <span id="vipStatusText">VIP ATIVO</span>
+        </button>
+        <button class="header-btn" onclick="openDonaSirleneChat()" title="Atendente Online - Dona Sirlene">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+          </svg>
+          <span class="badge-dot"></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- ─── FILTROS EM PÍLULAS (ESTILO DRIBBBLE COM DUAS LINHAS HARMONIOSAS) ─── -->
+    <nav class="pills-nav" id="pillsNav">
+      <div class="pills-nav-row">
+        <button class="pill-item active" data-tab="home" onclick="switchMainTab('home')">✨ Todos</button>
+        <button class="pill-item" data-tab="top10" onclick="switchMainTab('top10')">🔥 Em Alta</button>
+        <button class="pill-item" data-tab="turcas" onclick="switchMainTab('turcas')">🇹🇷 Turcas</button>
+        <button class="pill-item" data-tab="doramas" onclick="switchMainTab('doramas')">🌸 Doramas</button>
+      </div>
+      <div class="pills-nav-row pills-row-bottom">
+        <button class="pill-item" data-tab="mexicanas" onclick="switchMainTab('mexicanas')">🇲🇽 Mexicanas</button>
+        <button class="pill-item" data-tab="microdramas" onclick="switchMainTab('microdramas')">🎬 Minisséries</button>
+        <button class="pill-item hot-pill" data-tab="hot" onclick="switchMainTab('hot')">💋 Hot +18</button>
+      </div>
+    </nav>
+
+    <!-- ─── CAMPO DE BUSCA RÁPIDA ESTILO APP ─── -->
+    <div class="search-bar-wrap">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+      <input type="text" id="globalSearchInput" placeholder="Pesquisar novela, dorama, turca, ator..." oninput="handleGlobalSearch(this.value)" />
+      <button id="globalClearSearch" class="clear-search-btn" onclick="clearGlobalSearch()" style="display:none;">✕</button>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════════════════════════
+         VIEW 1: HOME (PÁGINA INICIAL ESTILO DRIBBBLE / NETFLIX MOBILE)
+         ═══════════════════════════════════════════════════════════════════════════ -->
+    <main id="viewHome" class="view-section active">
+
+      <!-- ─── BANNER HERO DESTAQUES (TURCA, DORAMA, MEXICANA, MINI DRAMA) ─── -->
+      <div class="hero-wrapper">
+        <!-- Card Principal Interativo -->
+        <section class="hero-card" id="heroCard" onclick="playCurrentHero()">
+          <img id="heroImg" class="hero-img" src="https://i.ytimg.com/vi/JHd1bRSSm-I/hqdefault.jpg" alt="Destaque" onerror="this.src='https://i.ytimg.com/vi/IPeKoGSaAqY/hqdefault.jpg'" />
+          
+          <!-- Dots de Paginação -->
+          <div class="hero-dots" id="heroDots">
+            <span class="hero-dot active" onclick="event.stopPropagation(); switchHeroSlide(0)"></span>
+            <span class="hero-dot" onclick="event.stopPropagation(); switchHeroSlide(1)"></span>
+            <span class="hero-dot" onclick="event.stopPropagation(); switchHeroSlide(2)"></span>
+            <span class="hero-dot" onclick="event.stopPropagation(); switchHeroSlide(3)"></span>
+          </div>
+
+          <!-- Setas de navegação -->
+          <button class="hero-nav-arrow prev" onclick="event.stopPropagation(); prevHeroSlide()" title="Anterior">‹</button>
+          <button class="hero-nav-arrow next" onclick="event.stopPropagation(); nextHeroSlide()" title="Próximo">›</button>
+
+          <div class="hero-overlay">
+            <div class="hero-badge-row">
+              <span class="tag-badge turca" id="heroBadge">SUCESSO TURCO 🇹🇷</span>
+              <span class="tag-badge vip">ACESSO VITALÍCIO</span>
+            </div>
+            <h1 class="hero-title" id="heroTitle">Série Madrugador — Temporadas Completas Dubladas</h1>
+            <p class="hero-desc" id="heroDesc">
+              O maior fenômeno das novelas turcas! A paixão proibida e divertida entre Sanem e Can Divit em Istambul, 100% dublado...
+            </p>
+            <div class="hero-cta-row">
+              <button class="btn-play-hero" onclick="event.stopPropagation(); playCurrentHero()">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+                <span>Assistir Temporada 1</span>
+              </button>
+              <button class="btn-fav-hero" onclick="event.stopPropagation(); openPixModal()" title="Liberar Acesso VIP">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- ─── CARROSSEL TOP 10 MAIS VISTOS (ESTILO NETFLIX) ─── -->
+      <section class="shelf-section">
+        <div class="section-header">
+          <h2 class="section-title">🏆 Top 10 Mais Assistidos</h2>
+          <span class="section-more" onclick="switchMainTab('top10')">Ver Todos</span>
+        </div>
+        <div class="top10-carousel" id="top10Carousel">
+          <!-- Renderizado dinamicamente via app.js -->
+        </div>
+      </section>
+
+      <!-- ─── CARROSSEL "PICK YOUR VIBE" ─── -->
+      <section class="shelf-section">
+        <div class="section-header">
+          <h2 class="section-title">Pick Your Vibe</h2>
+          <span class="section-more" onclick="switchMainTab('doramas')">Ver Catálogo</span>
+        </div>
+        <div class="vibe-carousel" id="vibeCarousel">
+          <!-- Renderizado dinamicamente via app.js -->
+        </div>
+      </section>
+
+      <!-- ─── CARROSSEL 2: DORAMAS DUBLADOS EM ALTA ─── -->
+      <section class="shelf-section">
+        <div class="section-header">
+          <h2 class="section-title">🌸 Doramas em Alta (Dublados)</h2>
+          <span class="section-more" onclick="switchMainTab('doramas')">Ver Todos (50) →</span>
+        </div>
+        <div class="shelf-carousel" id="shelfDoramasCarousel">
+          <!-- Renderizado via app.js -->
+        </div>
+      </section>
+
+      <!-- ─── CARROSSEL 3: NOVELAS TURCAS MAIS AMADAS ─── -->
+      <section class="shelf-section">
+        <div class="section-header">
+          <h2 class="section-title">🇹🇷 Novelas Turcas de Sucesso Mundial</h2>
+          <span class="section-more" onclick="switchMainTab('turcas')">Ver Todas (50) →</span>
+        </div>
+        <div class="shelf-carousel" id="shelfTurcasCarousel">
+          <!-- Renderizado via app.js -->
+        </div>
+      </section>
+
+      <!-- ─── CARROSSEL 4: NOVELAS MEXICANAS CLÁSSICAS ─── -->
+      <section class="shelf-section">
+        <div class="section-header">
+          <h2 class="section-title">🇲🇽 Novelas Mexicanas Clássicas</h2>
+          <span class="section-more" onclick="switchMainTab('mexicanas')">Ver Todas (50) →</span>
+        </div>
+        <div class="shelf-carousel" id="shelfMexicanasCarousel">
+          <!-- Renderizado via app.js -->
+        </div>
+      </section>
+
+      <!-- ─── CARROSSEL 5: MINISSÉRIES E MICRODRAMAS VIRAIS ─── -->
+      <section class="shelf-section">
+        <div class="section-header">
+          <h2 class="section-title">🎬 Microdramas e Minisséries Virais</h2>
+          <span class="section-more" onclick="switchMainTab('microdramas')">Ver Todos (50) →</span>
+        </div>
+        <div class="shelf-carousel" id="shelfMicrodramasCarousel">
+          <!-- Renderizado via app.js -->
+        </div>
+      </section>
+
+      <!-- ─── CARROSSEL 6: HOT MINISSÉRIES +18 ─── -->
+      <section class="shelf-section">
+        <div class="section-header">
+          <h2 class="section-title">💋 Hot Minisséries +18</h2>
+          <span class="section-more" onclick="switchMainTab('hot')">Ver Todas (18) →</span>
+        </div>
+        <div class="shelf-carousel" id="shelfHotCarousel">
+          <!-- Renderizado via app.js -->
+        </div>
+      </section>
+
+      <!-- ─── BANNER OFICIAL DE ASSINATURA VIP (R$ 19,90 VITALÍCIO) ─── -->
+      <section class="vip-presentation-card">
+        <div class="vip-presentation-glow"></div>
+        <div class="vip-presentation-content">
+          <div class="vip-badge-official">👑 ACESSO TOTAL VITALÍCIO</div>
+          <h2 class="vip-headline">Mais de 200 Séries e 12.000 Capítulos Completos em Alta Definição</h2>
+          <p class="vip-subline">
+            Assista no seu celular, computador ou envie direto para a sua Smart TV. Sem anúncios, sem mensalidades e com liberação imediata.
+          </p>
+          
+          <div class="vip-perks-grid">
+            <div class="perk-item">
+              <span class="perk-check">✓</span>
+              <span><strong>Acesso Vitalício Único</strong>: Pague R$ 19,90 uma vez e assista para sempre</span>
+            </div>
+            <div class="perk-item">
+              <span class="perk-check">✓</span>
+              <span><strong>Compatível com Smart TV</strong>: Transmita do celular ou abra no navegador da TV</span>
+            </div>
+            <div class="perk-item">
+              <span class="perk-check">✓</span>
+              <span><strong>Zero Anúncios</strong>: Capítulos contínuos sem propagandas chatas</span>
+            </div>
+            <div class="perk-item">
+              <span class="perk-check">✓</span>
+              <span><strong>100% em Português</strong>: Dublagens oficiais e áudio de cinema</span>
+            </div>
+          </div>
+
+          <div class="vip-pricing-box">
+            <div class="vip-old-price">De R$ 59,90</div>
+            <div class="vip-now-price">Por R$ 19,90 <span class="vip-price-type">(Taxa Única)</span></div>
+          </div>
+
+          <div class="vip-actions-group">
+            <button class="btn-vip-checkout-main" onclick="openPixModal()">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+              </svg>
+              <span>LIBERAR ACESSO NO SITE VIA PIX</span>
+            </button>
+            <button class="btn-vip-whatsapp-main" onclick="payViaWhatsApp()">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z"/>
+              </svg>
+              <span>PREFIRO COMPRAR DIRETO PELO WHATSAPP</span>
+            </button>
+          </div>
+
+          <!-- Selos Oficiais de Segurança (Elimina qualquer impressão de golpe) -->
+          <div class="security-badges-row">
+            <div class="sec-badge">
+              <span class="sec-icon">🔒</span>
+              <span>SSL 256-Bit Seguro</span>
+            </div>
+            <div class="sec-badge">
+              <span class="sec-icon">⚡</span>
+              <span>Pix Banco Central</span>
+            </div>
+            <div class="sec-badge">
+              <span class="sec-icon">🛡️</span>
+              <span>Garantia 7 Dias CDC</span>
+            </div>
+            <div class="sec-badge">
+              <span class="sec-icon">💳</span>
+              <span>Mercado Pago Oficial</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── DEPOIMENTOS REAIS DE ASSINANTES ─── -->
+      <section class="testimonials-section">
+        <div class="shelf-header">
+          <div class="shelf-title-box">
+            <span class="shelf-icon">💬</span>
+            <h2 class="shelf-title">Avaliações das Nossas Assinantes</h2>
+          </div>
+        </div>
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="testimonial-top">
+              <div class="test-user-info">
+                <strong>Camila Santos</strong>
+                <span>São Paulo • Assinante VIP</span>
+              </div>
+              <div class="test-stars">★★★★★</div>
+            </div>
+            <p class="test-text">
+              "Estava com receio no começo, mas chamei a Dona Sirlene no WhatsApp e ela me atendeu com todo carinho. Fiz o Pix de R$ 19,90 e na mesma hora já estava assistindo Série Madrugador inteira na minha TV!"
+            </p>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-top">
+              <div class="test-user-info">
+                <strong>Mariana Lima</strong>
+                <span>Curitiba • Assinante VIP</span>
+              </div>
+              <div class="test-stars">★★★★★</div>
+            </div>
+            <p class="test-text">
+              "A imagem é limpa em 1080p e o player é super rápido. Já assisti Rainha das Lágrimas e Pretendente Surpresa sem ter que ficar fechando propaganda a cada 2 minutos. Vale cada centavo!"
+            </p>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-top">
+              <div class="test-user-info">
+                <strong>Patrícia Ribeiro</strong>
+                <span>Belo Horizonte • Assinante VIP</span>
+              </div>
+              <div class="test-stars">★★★★★</div>
+            </div>
+            <p class="test-text">
+              "Melhor plataforma de novelinhas que já assinei. É taxa única mesmo, sem cobrança mensal no cartão. Toda noite assisto os episódios de bilionário no celular antes de dormir."
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── DÚVIDAS FREQUENTES (FAQ) ─── -->
+      <section class="faq-section">
+        <div class="shelf-header">
+          <div class="shelf-title-box">
+            <span class="shelf-icon">❓</span>
+            <h2 class="shelf-title">Perguntas Frequentes</h2>
+          </div>
+        </div>
+        <div class="faq-list">
+          <div class="faq-item" onclick="toggleFaq(this)">
+            <div class="faq-question">
+              <span>O pagamento de R$ 19,90 é mensal ou taxa única?</span>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              É taxa única! Você paga R$ 19,90 uma única vez e seu acesso é vitalício. Não há nenhuma renovação automática nem cobrança mensal no seu cartão ou Pix.
+            </div>
+          </div>
+
+          <div class="faq-item" onclick="toggleFaq(this)">
+            <div class="faq-question">
+              <span>Como assisto na minha Smart TV?</span>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              Você pode abrir o site diretamente no navegador da sua Smart TV ou utilizar o botão de transmissão/espelhamento do seu celular direto para a TV com 1 toque.
+            </div>
+          </div>
+
+          <div class="faq-item" onclick="toggleFaq(this)">
+            <div class="faq-question">
+              <span>Como recebo meu acesso após pagar?</span>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              O sistema reconhece o pagamento Pix em até 60 segundos e desbloqueia o site automaticamente no seu navegador. Você também recebe o comprovante e auxílio completo pelo WhatsApp.
+            </div>
+          </div>
+
+          <div class="faq-item" onclick="toggleFaq(this)">
+            <div class="faq-question">
+              <span>E se eu tiver dificuldades para pagar pelo site?</span>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              Basta clicar no botão verde de WhatsApp para falar com a Dona Sirlene. Nossa equipe envia a chave Pix diretamente na conversa e ativa o seu acesso com suporte humano.
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ═══════════════════════════════════════════════════════════════════════════
+         VIEW 2: CATEGORY HUB (EXCLUSIVO: 50 DORAMAS, 50 TURCAS OU 50 MICRODRAMAS)
+         ═══════════════════════════════════════════════════════════════════════════ -->
+    <main id="viewCategory" class="view-section">
+      
+      <!-- Banner de Cabeçalho da Categoria -->
+      <section class="category-header-banner" id="categoryHeaderBanner">
+        <div class="cat-banner-content">
+          <span class="cat-badge-top" id="catBadgeTop">CATÁLOGO EXCLUSIVO</span>
+          <h1 class="cat-headline" id="catHeadline">Doramas Dublados em Português</h1>
+          <p class="cat-description" id="catDescription">
+            Explore 50 superproduções asiáticas dubladas e legendadas em alta definição com episódios completos.
+          </p>
+          <div class="cat-stats-row">
+            <span class="cat-stat-pill" id="catCountStat">50 Séries Disponíveis</span>
+            <span class="cat-stat-pill">Áudio em Português</span>
+            <span class="cat-stat-pill">Sem Anúncios</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Barra de Sub-Gêneros / Filtro Rápido -->
+      <nav class="subgenres-nav" id="subgenresNav">
+        <!-- Preenchido dinamicamente via JS -->
+      </nav>
+
+      <!-- Grid com as 50 Séries da Categoria Selecionada -->
+      <section class="category-grid-section">
+        <div class="grid-toolbar">
+          <div class="grid-showing-text" id="gridShowingText">Mostrando 50 produções</div>
+          <div class="grid-order-tag">⭐ Ordenado por Relevância e Audiência</div>
+        </div>
+        <div class="catalog-grid" id="categoryGrid">
+          <!-- Renderizado via app.js -->
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ═══════════════════════════════════════════════════════════════════════════
+         VIEW 3: TOP 10 RANKING EXCLUSIVO
+         ═══════════════════════════════════════════════════════════════════════════ -->
+    <main id="viewTop10" class="view-section">
+      <section class="top10-page-header">
+        <span class="cat-badge-top">OS MAIS POPULARES DO BRASIL</span>
+        <h1 class="cat-headline">🏆 Top 10 Séries Mais Assistidas</h1>
+        <p class="cat-description">
+          As 10 produções com maior audiência e maratonas recordes na plataforma esta semana.
+        </p>
+      </section>
+
+      <section class="top10-ranking-list" id="top10RankingList">
+        <!-- Renderizado dinamicamente via app.js -->
+      </section>
+    </main>
+
+    <!-- ─── DOCK FLUTUANTE DE NAVEGAÇÃO INFERIOR ESTILO DRIBBBLE ─── -->
+    <nav class="bottom-dock">
+      <button class="dock-btn active" id="dockHome" data-tab="home" onclick="switchMainTab('home')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+          <polyline points="9 22 9 12 15 12 15 22"></polyline>
+        </svg>
+        <span>Início</span>
+      </button>
+
+      <button class="dock-btn" id="dockExplore" data-tab="doramas" onclick="switchMainTab('doramas')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <span>Explorar</span>
+      </button>
+
+      <button class="dock-btn highlight" id="dockVip" onclick="openPixModal()">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+        </svg>
+        <span>VIP / Liberar</span>
+      </button>
+
+      <button class="dock-btn" id="dockSupport" onclick="openDonaSirleneChat()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+        </svg>
+        <span>Suporte</span>
+      </button>
+    </nav>
+
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════════
+       PLAYER MODAL CAMUFLADO (STEALTH CINEMA PLAYER)
+       ═══════════════════════════════════════════════════════════════════════════ -->
+  <div class="player-modal" id="playerModal">
+    <!-- Topbar do Player -->
+    <div class="player-topbar">
+      <button class="btn-back-player" onclick="closePlayerModal()" title="Fechar Player">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+      </button>
+      <div class="player-title-info">
+        <div class="player-series-title" id="playerSeriesTitle">Carregando...</div>
+        <div class="player-ep-name" id="playerEpName">Capítulo 01</div>
+      </div>
+      <button class="vip-pill-btn" onclick="openPixModal()" style="font-size:0.75rem; padding:6px 14px;">
+        👑 VIP R$ 19,90
+      </button>
+    </div>
+
+    <!-- Área de Vídeo Camuflada -->
+    <div class="video-stealth-wrapper" id="videoStealthWrapper">
+      <!-- Container Iframe -->
+      <div class="stealth-iframe-container" id="stealthIframeContainer">
+        <div id="youtubePlayerHolder"></div>
+      </div>
+
+      <!-- Camada de Toque Transparente -->
+      <div class="stealth-touch-shield" id="stealthTouchShield" onclick="togglePlayerControls()" ondblclick="toggleFullScreen(event)"></div>
+
+      <!-- Controles Próprios Customizados Estilo Netflix -->
+      <div class="custom-controls-overlay" id="customControlsOverlay">
+        
+        <!-- Botão Play / Pause Central -->
+        <button class="center-play-trigger" id="centerPlayTrigger" onclick="togglePlayPause()">
+          <svg id="centerPlayIcon" width="30" height="30" viewBox="0 0 24 24" fill="currentColor">
+            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+          </svg>
+        </button>
+
+        <!-- Barra de Progresso / Seekbar -->
+        <div class="seekbar-container" id="seekbarContainer" onclick="seekVideo(event)">
+          <div class="seekbar-rail">
+            <div class="seekbar-progress" id="seekbarProgress"></div>
+          </div>
+        </div>
+
+        <div class="controls-row">
+          <div class="time-display">
+            <span id="currentTimeDisplay">00:00</span> / <span id="totalTimeDisplay">45:20</span>
+          </div>
+
+          <div class="player-action-btns">
+            <!-- Pular 10s para trás -->
+            <button class="ctrl-icon-btn" onclick="skipTime(-10)" title="Voltar 10s">
+              <span style="font-size:0.8rem; font-weight:800;">-10s</span>
+            </button>
+
+            <!-- Pular 10s para frente -->
+            <button class="ctrl-icon-btn" onclick="skipTime(10)" title="Avançar 10s">
+              <span style="font-size:0.8rem; font-weight:800;">+10s</span>
+            </button>
+
+            <!-- Seletor de Velocidade -->
+            <button class="ctrl-icon-btn speed-btn" id="speedBtn" onclick="togglePlaybackSpeed()" title="Velocidade">
+              1x
+            </button>
+
+            <!-- Mute / Unmute -->
+            <button class="ctrl-icon-btn" onclick="toggleMute()" id="muteBtn" title="Som">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+              </svg>
+            </button>
+
+            <!-- Tela Cheia Híbrida -->
+            <button class="ctrl-icon-btn" id="fullscreenBtn" onclick="toggleFullScreen(event)" title="Tela Cheia">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Paywall Overlay Cinematográfico (Bloqueio Elegante de Degustação) -->
+      <div class="paywall-overlay" id="paywallOverlay">
+        <div class="paywall-lock-badge">🔒</div>
+        <h3 class="paywall-heading">Gostou da Prévia? Libere a Série Completa!</h3>
+        <p class="paywall-text">
+          Você assistiu ao teaser de degustação em alta definição. Desbloqueie agora todos os capítulos de todas as 200 produções sem anúncios!
+        </p>
+        <ul class="paywall-benefits-list">
+          <li><span>✓</span> Acesso vitalício a mais de 12.000 capítulos completos</li>
+          <li><span>✓</span> Doramas, novelas turcas, mexicanas e minisséries dubladas em 1080p</li>
+          <li><span>✓</span> Compatível com Celular, Tablet, Computador e Smart TV</li>
+          <li><span>✓</span> Pagamento único de apenas R$ 19,90 (sem mensalidade)</li>
+        </ul>
+        <button class="btn-unlock-paywall" onclick="openPixModal()">
+          <span>🔓</span> LIBERAR NO SITE VIA PIX (R$ 19,90)
+        </button>
+        <button class="btn-unlock-chat" onclick="hidePaywall(); openDonaSirleneChat('Oi Dona Sirlene! Quero tirar uma dúvida e liberar o meu acesso VIP!');" style="width: 100%; background: linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%); border: none; color: #fff; font-weight: 800; font-size: 0.88rem; padding: 12px; border-radius: 12px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 8px; box-shadow: 0 4px 15px rgba(236, 72, 153, 0.4);">
+          💬 FALAR COM DONA SIRLENE NO CHAT (LIBERAR VIP)
+        </button>
+        <button class="btn-unlock-whatsapp" onclick="payViaWhatsApp()">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z"/>
+          </svg>
+          <span>OU COMPRAR DIRETO NO WHATSAPP COM ATENDENTE</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Gaveta Rica de Episódios & Ficha Técnica -->
+    <div class="player-bottom-panel">
+      <!-- Abas da Gaveta: Capítulos vs Ficha Técnica -->
+      <div class="player-drawer-tabs">
+        <button class="drawer-tab-btn active" id="tabBtnEpisodes" onclick="switchPlayerTab('episodes')">
+          📺 Capítulos (<span id="episodesTotalCount">50</span>)
+        </button>
+        <button class="drawer-tab-btn" id="tabBtnDetails" onclick="switchPlayerTab('details')">
+          ℹ️ Detalhes da Série
+        </button>
+      </div>
+
+      <!-- Conteúdo 1: Lista Rica de Capítulos -->
+      <div class="player-tab-content active" id="tabContentEpisodes">
+        <div class="episodes-season-row" id="episodesSeasonRow">
+          <!-- Filtro de lotes de episódios se a série for grande -->
+        </div>
+        <div class="episodes-rich-list" id="episodesRichList">
+          <!-- Renderizado dinamicamente com título, duração e status VIP -->
+        </div>
+      </div>
+
+      <!-- Conteúdo 2: Ficha Técnica Profissional -->
+      <div class="player-tab-content" id="tabContentDetails">
+        <div class="series-details-box" id="seriesDetailsBox">
+          <!-- Renderizado via app.js -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════════
+       MODAL DE CHECKOUT PIX DE ALTO PADRÃO INSTITUCIONAL
+       ═══════════════════════════════════════════════════════════════════════════ -->
+  <div class="modal-backdrop" id="pixModalBackdrop">
+    <div class="pix-modal-box">
+      <button class="modal-close-btn" onclick="closePixModal()">✕</button>
+      
+      <!-- Cabeçalho de Confiança -->
+      <div class="checkout-security-header">
+        <span class="sec-ssl-icon">🔒</span>
+        <span>Ambiente Criptografado SSL 256 bits</span>
+      </div>
+
+      <div class="pix-badge-top">ACESSO VITALÍCIO OFICIAL</div>
+      <h3 class="pix-title">Assinatura Novelinhas VIP</h3>
+      <p class="pix-subtitle">Mais de 200 produções completas e 12.000 episódios sem anúncios</p>
+
+      <div class="pix-price-tag">
+        <span class="old-price">R$ 59,90</span>
+        <span class="current-price">R$ 19,90</span>
+        <span class="tax-type">Taxa única • Sem mensalidade</span>
+      </div>
+
+      <!-- Card Especial Chave Pix CPF (Mobile-First Copia e Cola) -->
+      <div class="pix-key-highlight-card">
+        <div class="pix-key-badge-row">
+          <span class="pix-type-badge">🔑 TIPO DE CHAVE: CPF</span>
+          <span class="pix-instant-badge">⚡ APROVAÇÃO RÁPIDA</span>
+        </div>
+
+        <div class="pix-field-group">
+          <label class="pix-field-label">Chave Pix Oficial (CPF):</label>
+          <div class="pix-copy-action-box">
+            <input type="text" class="pix-key-big-input" id="pixKeyInput" value="975.956.249-91" readonly />
+            <button class="btn-copy-pix-main" id="btnCopyPix" onclick="copyPixKey()">
+              📋 COPIAR CHAVE
+            </button>
+          </div>
+        </div>
+
+        <div class="pix-account-meta">
+          <div class="pix-meta-row">
+            <span class="pix-meta-label">👤 Titular:</span>
+            <span class="pix-meta-val">Roseli (Assistente Financeira)</span>
+          </div>
+          <div class="pix-meta-row">
+            <span class="pix-meta-label">🏦 Banco:</span>
+            <span class="pix-meta-val">Mercado Pago</span>
+          </div>
+          <div class="pix-meta-row">
+            <span class="pix-meta-label">💰 Valor:</span>
+            <span class="pix-meta-val highlight">R$ 19,90 (Taxa única)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Botão Principal: Já fiz o pagamento / Redireciona pro WhatsApp para comprovante -->
+      <button class="btn-i-paid" id="btnIPaid" onclick="handleUserPaidFlow()">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z"/>
+        </svg>
+        <span>⚡ JÁ FIZ O PAGAMENTO / ENVIAR COMPROVANTE</span>
+      </button>
+
+      <!-- Painel Dinâmico de Validação de Código VIP -->
+      <div class="vip-code-unlock-card" id="vipCodeUnlockCard" style="display: none;">
+        <div class="vip-code-wa-sent-notice">
+          📲 <strong>WhatsApp aberto!</strong> Envie o comprovante para a Dona Sirlene e digite o seu <strong>Código VIP</strong> recebido para liberar tudo na hora:
+        </div>
+        <div class="vip-code-input-row">
+          <input type="text" id="vipUnlockCodeInput" class="vip-code-input" placeholder="DIGITE SEU CÓDIGO VIP" maxlength="20" autocomplete="off" onkeyup="if(event.key==='Enter') validateAndUnlockWithVipCode()" />
+          <button class="btn-validate-vip-code" onclick="validateAndUnlockWithVipCode()">
+            🔓 LIBERAR
+          </button>
+        </div>
+        <div id="vipCodeErrorMsg" class="vip-code-status-msg"></div>
+      </div>
+
+      <div class="have-code-toggle-wrap">
+        <button type="button" class="btn-toggle-code" onclick="toggleVipCodeCard()">
+          🔑 Já recebeu seu Código VIP? Clique aqui para digitar
+        </button>
+      </div>
+
+      <div class="pix-or-divider">
+        <span>PREFERE ATENDIMENTO COM A DONA SIRLENE?</span>
+      </div>
+
+      <button class="btn-chat-direct-pay" onclick="closePixModal(); openDonaSirleneChat('Oi Dona Sirlene! Estou no checkout e quero tirar uma dúvida antes de pagar!');" style="width: 100%; background: linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%); border: none; color: #fff; font-weight: 800; font-size: 0.85rem; padding: 12px; border-radius: 12px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 8px; box-shadow: 0 4px 15px rgba(236, 72, 153, 0.4);">
+        💬 TIRAR DÚVIDAS NO CHAT COM DONA SIRLENE
+      </button>
+
+      <button class="btn-whatsapp-direct-pay" onclick="payViaWhatsApp()">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z"/>
+        </svg>
+        <span>COMPRAR NO WHATSAPP COM A DONA SIRLENE</span>
+      </button>
+
+      <div class="checkout-footer-guarantee">
+        <div class="guarantee-shield">🛡️</div>
+        <div>
+          <strong>Garantia Legal de 7 Dias (Art. 49 do CDC)</strong><br />
+          Se você não gostar do conteúdo, devolvemos 100% do seu dinheiro. Sem perguntas.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- YouTube IFrame API Script -->
+  <script src="https://www.youtube.com/iframe_api"></script>
+  
+  <script src="catalog.js?v=prod1"></script>
+  <script src="app.js?v=prod1"></script>
+  <script src="chat-agent.js?v=prod1"></script>
+</body>
+</html>
