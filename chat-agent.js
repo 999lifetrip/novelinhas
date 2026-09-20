@@ -296,8 +296,7 @@
 
       const data = await response.json();
       showTyping(false);
-      isWaitingResponse = false;
-
+      if (data && data.reply) {
         addAgentMessage(data.reply, data);
 
         // Não libera mais automaticamente sem código/comprovante (anti-burla)
