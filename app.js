@@ -1281,7 +1281,7 @@ function toggleVipCodeCard() {
 function sendProofViaWhatsApp() {
   const currentTitle = currentSeries ? ` da novela "${currentSeries.title}"` : '';
   const msg = encodeURIComponent(`Olá Dona Sirlene! Tudo bem? Acabei de realizar o pagamento do Pix de R$ 19,90 do Novelinhas VIP${currentTitle}! 📸 Segue o meu comprovante em anexo para você conferir e me enviar meu Código VIP de Liberação:`);
-  window.open(`https://wa.me/554189031232?text=${msg}`, '_blank');
+  window.open(`https://wa.me/554195993007?text=${msg}`, '_blank');
 }
 
 function validateAndUnlockWithVipCode(codeOverride) {
@@ -1347,7 +1347,7 @@ function startPixCountdown() {
 function payViaWhatsApp() {
   const currentTitle = currentSeries ? ` da novela "${currentSeries.title}"` : '';
   const msg = encodeURIComponent(`Olá Dona Sirlene! Tudo bem? Quero liberar meu Acesso VIP das Novelinhas por R$ 19,90${currentTitle}, mas prefiro fazer o pagamento direto com você por aqui pelo WhatsApp! Poderia me passar a chave Pix e me orientar?`);
-  window.open(`https://wa.me/554189031232?text=${msg}`, '_blank');
+  window.open(`https://wa.me/554195993007?text=${msg}`, '_blank');
 }
 
 function openSupportWhatsApp() {
