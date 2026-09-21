@@ -320,8 +320,8 @@ function renderSubgenresNav(categoryKey, activeSubgenre) {
 // ─── CARROSSÉIS E PRATELEIRAS DA HOME ────────────────────────────────────────
 function renderHomeShelves() {
   renderTop10Carousel();
-  renderShelf('doramas', 'shelfDoramasCarousel');
   renderShelf('turcas', 'shelfTurcasCarousel');
+  renderShelf('doramas', 'shelfDoramasCarousel');
   renderShelf('mexicanas', 'shelfMexicanasCarousel');
   renderShelf('microdramas', 'shelfMicrodramasCarousel');
   renderShelf('hot', 'shelfHotCarousel');
@@ -372,21 +372,21 @@ function renderTop10Carousel() {
   const container = document.getElementById('top10Carousel');
   if (!container) return;
 
-  // Curadoria equilibrada com os maiores destaques das 5 categorias
+  // Curadoria com as novelas de maior audiência e hype (TikTok, TV e Streaming)
   const top10 = [
+    NOVELAS_CATALOG.find(s => s.id === 'turca-forca-de-mulher') || NOVELAS_CATALOG.find(s => s.id === 'turca-1'),
+    NOVELAS_CATALOG.find(s => s.id === 'turca-yali-capkini') || NOVELAS_CATALOG.find(s => s.id === 'turca-2'),
+    NOVELAS_CATALOG.find(s => s.id === 'turca-4') || NOVELAS_CATALOG[3],
     NOVELAS_CATALOG.find(s => s.id === 'turca-1'),
-    NOVELAS_CATALOG.find(s => s.id === 'dorama-1'),
+    NOVELAS_CATALOG.find(s => s.id === 'turca-terra-amarga') || NOVELAS_CATALOG.find(s => s.id === 'turca-5'),
+    NOVELAS_CATALOG.find(s => s.id === 'turca-2'),
     NOVELAS_CATALOG.find(s => s.id === 'mexicana-1'),
-    NOVELAS_CATALOG.find(s => s.id === 'hot-1'),
-    NOVELAS_CATALOG.find(s => s.id === 'turca-2') || NOVELAS_CATALOG[2],
-    NOVELAS_CATALOG.find(s => s.id === 'dorama-2') || NOVELAS_CATALOG[1],
-    NOVELAS_CATALOG.find(s => s.id === 'mexicana-2') || NOVELAS_CATALOG[3],
-    NOVELAS_CATALOG.find(s => s.id === 'hot-11') || NOVELAS_CATALOG[4],
-    NOVELAS_CATALOG.find(s => s.id === 'turca-4') || NOVELAS_CATALOG[5],
-    NOVELAS_CATALOG.find(s => s.id === 'dorama-3') || NOVELAS_CATALOG[6]
+    NOVELAS_CATALOG.find(s => /rebelde/i.test(s.title)) || NOVELAS_CATALOG.find(s => s.id === 'mexicana-2'),
+    NOVELAS_CATALOG.find(s => s.id === 'dorama-1'),
+    NOVELAS_CATALOG.find(s => s.id === 'micro-ceo-vinganca-3t') || NOVELAS_CATALOG.find(s => s.id === 'hot-1')
   ].filter(Boolean);
 
-  const durations = ['1:04:35', '54:20', '48:15', '2:05:33', '45:30', '58:40', '1:02:18', '2:38:28', '1:10:44', '51:22'];
+  const durations = ['48:30', '52:15', '45:20', '1:04:35', '50:40', '54:20', '48:15', '46:30', '58:40', '25:10'];
 
   const isPosterCover = top10.some(i => i.cover && i.cover.startsWith('covers/'));
   container.innerHTML = top10.map((item, idx) => `
