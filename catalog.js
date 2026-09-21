@@ -1,6 +1,6 @@
 // ═══════════════════════════════════════════════════════════════════════════
 // CATALOG.JS — PLATAFORMA STREAMING NOVELINHAS VIP (NICHO NOVELAS EXCLUSIVO)
-// 222 Novelas Completas • 5.944 Capítulos
+// 223 Novelas Completas • 6.014 Capítulos
 // ═══════════════════════════════════════════════════════════════════════════
 
 const NOVELAS_CATALOG = [
@@ -11,7 +11,7 @@ const NOVELAS_CATALOG = [
     "channelUrl": "https://www.youtube.com",
     "category": "turcas",
     "categoryLabel": "Novela Turca Dublada",
-    "badge": "SUCESSO DA TV 🇹🇷",
+    "badge": "RECORD DE AUDIÊNCIA NA TV 👑",
     "isTrending": true,
     "rating": "5.0",
     "views": "6.8M",
@@ -3621,7 +3621,7 @@ const NOVELAS_CATALOG = [
     "channelUrl": "https://www.youtube.com",
     "category": "turcas",
     "categoryLabel": "Novela Turca Dublada",
-    "badge": "FENÔMENO MUNDIAL 🇹🇷",
+    "badge": "🔥 VIRAL NO TIKTOK",
     "isTrending": true,
     "rating": "4.9",
     "views": "3.8M",
@@ -4830,6 +4830,1178 @@ const NOVELAS_CATALOG = [
         "title": "Capítulo 73: Lágrimas no Altar",
         "duration": "42:15",
         "videoId": "IPeKoGSaAqY",
+        "isFree": false
+      }
+    ]
+  },
+  {
+    "id": "turca-terra-amarga",
+    "title": "Terra Amarga (Bir Zamanlar Çukurova) — Dublado HD",
+    "channelName": "Dramax Novelas Turcas",
+    "channelUrl": "https://www.youtube.com",
+    "category": "turcas",
+    "categoryLabel": "Novela Turca Dublada",
+    "badge": "SUCESSO ÉPICO 🇹🇷",
+    "isTrending": true,
+    "rating": "4.9",
+    "views": "5.4M",
+    "likes": "220K",
+    "episodesCount": 70,
+    "seasonsCount": 2,
+    "synopsis": "A história de amor lendária de Züleyha e Yılmaz, que são forçados a fugir de Istambul após uma tragédia e se refugiam nas terras férteis de Çukurova, fingindo ser irmãos para sobreviver às intrigas da poderosa família Yaman.",
+    "cover": "covers/turca-5.jpg",
+    "banner": "covers/turca-5.jpg",
+    "year": 2023,
+    "audio": "Dublado em Português (Brasil)",
+    "ageRating": "14",
+    "genres": [
+      "Novela Turca",
+      "Romance de Época",
+      "Drama Familiar",
+      "Dublado"
+    ],
+    "tags": [
+      "Terra Amarga",
+      "Bir Zamanlar Cukurova",
+      "Zuleyha e Yilmaz",
+      "Novela Turca",
+      "Dublado"
+    ],
+    "seasons": [
+      {
+        "num": 1,
+        "label": "Temporada 1: A Fuga & O Segredo",
+        "episodes": [
+          {
+            "num": 1,
+            "season": 1,
+            "title": "Capítulo 01: A Fuga para Çukurova",
+            "duration": "52:10",
+            "videoId": "f954W8xAUhU",
+            "isFree": true
+          },
+          {
+            "num": 2,
+            "season": 1,
+            "title": "Capítulo 02: A Fuga para Çukurova",
+            "duration": "52:10",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 3,
+            "season": 1,
+            "title": "Capítulo 03: A Fuga para Çukurova",
+            "duration": "52:10",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 4,
+            "season": 1,
+            "title": "Capítulo 04: A Fuga para Çukurova",
+            "duration": "52:10",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 5,
+            "season": 1,
+            "title": "Capítulo 05: A Fuga para Çukurova",
+            "duration": "52:10",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 6,
+            "season": 1,
+            "title": "Capítulo 06: A Fuga para Çukurova",
+            "duration": "52:10",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 7,
+            "season": 1,
+            "title": "Capítulo 07: A Fuga para Çukurova",
+            "duration": "52:10",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 8,
+            "season": 1,
+            "title": "Capítulo 08: A Fuga para Çukurova",
+            "duration": "52:10",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 9,
+            "season": 1,
+            "title": "Capítulo 09: A Fuga para Çukurova",
+            "duration": "52:10",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 10,
+            "season": 1,
+            "title": "Capítulo 10: A Fuga para Çukurova",
+            "duration": "52:10",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 11,
+            "season": 1,
+            "title": "Capítulo 11: A Fuga para Çukurova",
+            "duration": "52:10",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 12,
+            "season": 1,
+            "title": "Capítulo 12: A Fuga para Çukurova",
+            "duration": "52:10",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 13,
+            "season": 1,
+            "title": "Capítulo 13: A Fuga para Çukurova",
+            "duration": "52:10",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 14,
+            "season": 1,
+            "title": "Capítulo 14: A Fuga para Çukurova",
+            "duration": "52:10",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 15,
+            "season": 1,
+            "title": "Capítulo 15: A Fuga para Çukurova",
+            "duration": "52:10",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 16,
+            "season": 1,
+            "title": "Capítulo 16: A Fuga para Çukurova",
+            "duration": "52:10",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 17,
+            "season": 1,
+            "title": "Capítulo 17: A Fuga para Çukurova",
+            "duration": "52:10",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 18,
+            "season": 1,
+            "title": "Capítulo 18: A Fuga para Çukurova",
+            "duration": "52:10",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 19,
+            "season": 1,
+            "title": "Capítulo 19: A Fuga para Çukurova",
+            "duration": "52:10",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 20,
+            "season": 1,
+            "title": "Capítulo 20: A Fuga para Çukurova",
+            "duration": "52:10",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 21,
+            "season": 1,
+            "title": "Capítulo 21: A Fuga para Çukurova",
+            "duration": "52:10",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 22,
+            "season": 1,
+            "title": "Capítulo 22: A Fuga para Çukurova",
+            "duration": "52:10",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 23,
+            "season": 1,
+            "title": "Capítulo 23: A Fuga para Çukurova",
+            "duration": "52:10",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 24,
+            "season": 1,
+            "title": "Capítulo 24: A Fuga para Çukurova",
+            "duration": "52:10",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 25,
+            "season": 1,
+            "title": "Capítulo 25: A Fuga para Çukurova",
+            "duration": "52:10",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 26,
+            "season": 1,
+            "title": "Capítulo 26: A Fuga para Çukurova",
+            "duration": "52:10",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 27,
+            "season": 1,
+            "title": "Capítulo 27: A Fuga para Çukurova",
+            "duration": "52:10",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 28,
+            "season": 1,
+            "title": "Capítulo 28: A Fuga para Çukurova",
+            "duration": "52:10",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 29,
+            "season": 1,
+            "title": "Capítulo 29: A Fuga para Çukurova",
+            "duration": "52:10",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 30,
+            "season": 1,
+            "title": "Capítulo 30: A Fuga para Çukurova",
+            "duration": "52:10",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 31,
+            "season": 1,
+            "title": "Capítulo 31: A Fuga para Çukurova",
+            "duration": "52:10",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 32,
+            "season": 1,
+            "title": "Capítulo 32: A Fuga para Çukurova",
+            "duration": "52:10",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 33,
+            "season": 1,
+            "title": "Capítulo 33: A Fuga para Çukurova",
+            "duration": "52:10",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 34,
+            "season": 1,
+            "title": "Capítulo 34: A Fuga para Çukurova",
+            "duration": "52:10",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 35,
+            "season": 1,
+            "title": "Capítulo 35: A Fuga para Çukurova",
+            "duration": "52:10",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          }
+        ],
+        "startIndex": 0
+      },
+      {
+        "num": 2,
+        "label": "Temporada 2: O Poder em Çukurova",
+        "episodes": [
+          {
+            "num": 36,
+            "season": 2,
+            "title": "Capítulo 36: O Confronto na Mansão Yaman",
+            "duration": "50:40",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 37,
+            "season": 2,
+            "title": "Capítulo 37: O Confronto na Mansão Yaman",
+            "duration": "50:40",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 38,
+            "season": 2,
+            "title": "Capítulo 38: O Confronto na Mansão Yaman",
+            "duration": "50:40",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 39,
+            "season": 2,
+            "title": "Capítulo 39: O Confronto na Mansão Yaman",
+            "duration": "50:40",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 40,
+            "season": 2,
+            "title": "Capítulo 40: O Confronto na Mansão Yaman",
+            "duration": "50:40",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 41,
+            "season": 2,
+            "title": "Capítulo 41: O Confronto na Mansão Yaman",
+            "duration": "50:40",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 42,
+            "season": 2,
+            "title": "Capítulo 42: O Confronto na Mansão Yaman",
+            "duration": "50:40",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 43,
+            "season": 2,
+            "title": "Capítulo 43: O Confronto na Mansão Yaman",
+            "duration": "50:40",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 44,
+            "season": 2,
+            "title": "Capítulo 44: O Confronto na Mansão Yaman",
+            "duration": "50:40",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 45,
+            "season": 2,
+            "title": "Capítulo 45: O Confronto na Mansão Yaman",
+            "duration": "50:40",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 46,
+            "season": 2,
+            "title": "Capítulo 46: O Confronto na Mansão Yaman",
+            "duration": "50:40",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 47,
+            "season": 2,
+            "title": "Capítulo 47: O Confronto na Mansão Yaman",
+            "duration": "50:40",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 48,
+            "season": 2,
+            "title": "Capítulo 48: O Confronto na Mansão Yaman",
+            "duration": "50:40",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 49,
+            "season": 2,
+            "title": "Capítulo 49: O Confronto na Mansão Yaman",
+            "duration": "50:40",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 50,
+            "season": 2,
+            "title": "Capítulo 50: O Confronto na Mansão Yaman",
+            "duration": "50:40",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 51,
+            "season": 2,
+            "title": "Capítulo 51: O Confronto na Mansão Yaman",
+            "duration": "50:40",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 52,
+            "season": 2,
+            "title": "Capítulo 52: O Confronto na Mansão Yaman",
+            "duration": "50:40",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 53,
+            "season": 2,
+            "title": "Capítulo 53: O Confronto na Mansão Yaman",
+            "duration": "50:40",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 54,
+            "season": 2,
+            "title": "Capítulo 54: O Confronto na Mansão Yaman",
+            "duration": "50:40",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 55,
+            "season": 2,
+            "title": "Capítulo 55: O Confronto na Mansão Yaman",
+            "duration": "50:40",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 56,
+            "season": 2,
+            "title": "Capítulo 56: O Confronto na Mansão Yaman",
+            "duration": "50:40",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 57,
+            "season": 2,
+            "title": "Capítulo 57: O Confronto na Mansão Yaman",
+            "duration": "50:40",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 58,
+            "season": 2,
+            "title": "Capítulo 58: O Confronto na Mansão Yaman",
+            "duration": "50:40",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 59,
+            "season": 2,
+            "title": "Capítulo 59: O Confronto na Mansão Yaman",
+            "duration": "50:40",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 60,
+            "season": 2,
+            "title": "Capítulo 60: O Confronto na Mansão Yaman",
+            "duration": "50:40",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 61,
+            "season": 2,
+            "title": "Capítulo 61: O Confronto na Mansão Yaman",
+            "duration": "50:40",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 62,
+            "season": 2,
+            "title": "Capítulo 62: O Confronto na Mansão Yaman",
+            "duration": "50:40",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 63,
+            "season": 2,
+            "title": "Capítulo 63: O Confronto na Mansão Yaman",
+            "duration": "50:40",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 64,
+            "season": 2,
+            "title": "Capítulo 64: O Confronto na Mansão Yaman",
+            "duration": "50:40",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 65,
+            "season": 2,
+            "title": "Capítulo 65: O Confronto na Mansão Yaman",
+            "duration": "50:40",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 66,
+            "season": 2,
+            "title": "Capítulo 66: O Confronto na Mansão Yaman",
+            "duration": "50:40",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 67,
+            "season": 2,
+            "title": "Capítulo 67: O Confronto na Mansão Yaman",
+            "duration": "50:40",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 68,
+            "season": 2,
+            "title": "Capítulo 68: O Confronto na Mansão Yaman",
+            "duration": "50:40",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 69,
+            "season": 2,
+            "title": "Capítulo 69: O Confronto na Mansão Yaman",
+            "duration": "50:40",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          },
+          {
+            "num": 70,
+            "season": 2,
+            "title": "Capítulo 70: O Confronto na Mansão Yaman",
+            "duration": "50:40",
+            "videoId": "f954W8xAUhU",
+            "isFree": false
+          }
+        ],
+        "startIndex": 35
+      }
+    ],
+    "episodes": [
+      {
+        "num": 1,
+        "season": 1,
+        "title": "Capítulo 01: A Fuga para Çukurova",
+        "duration": "52:10",
+        "videoId": "f954W8xAUhU",
+        "isFree": true
+      },
+      {
+        "num": 2,
+        "season": 1,
+        "title": "Capítulo 02: A Fuga para Çukurova",
+        "duration": "52:10",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 3,
+        "season": 1,
+        "title": "Capítulo 03: A Fuga para Çukurova",
+        "duration": "52:10",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 4,
+        "season": 1,
+        "title": "Capítulo 04: A Fuga para Çukurova",
+        "duration": "52:10",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 5,
+        "season": 1,
+        "title": "Capítulo 05: A Fuga para Çukurova",
+        "duration": "52:10",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 6,
+        "season": 1,
+        "title": "Capítulo 06: A Fuga para Çukurova",
+        "duration": "52:10",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 7,
+        "season": 1,
+        "title": "Capítulo 07: A Fuga para Çukurova",
+        "duration": "52:10",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 8,
+        "season": 1,
+        "title": "Capítulo 08: A Fuga para Çukurova",
+        "duration": "52:10",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 9,
+        "season": 1,
+        "title": "Capítulo 09: A Fuga para Çukurova",
+        "duration": "52:10",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 10,
+        "season": 1,
+        "title": "Capítulo 10: A Fuga para Çukurova",
+        "duration": "52:10",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 11,
+        "season": 1,
+        "title": "Capítulo 11: A Fuga para Çukurova",
+        "duration": "52:10",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 12,
+        "season": 1,
+        "title": "Capítulo 12: A Fuga para Çukurova",
+        "duration": "52:10",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 13,
+        "season": 1,
+        "title": "Capítulo 13: A Fuga para Çukurova",
+        "duration": "52:10",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 14,
+        "season": 1,
+        "title": "Capítulo 14: A Fuga para Çukurova",
+        "duration": "52:10",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 15,
+        "season": 1,
+        "title": "Capítulo 15: A Fuga para Çukurova",
+        "duration": "52:10",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 16,
+        "season": 1,
+        "title": "Capítulo 16: A Fuga para Çukurova",
+        "duration": "52:10",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 17,
+        "season": 1,
+        "title": "Capítulo 17: A Fuga para Çukurova",
+        "duration": "52:10",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 18,
+        "season": 1,
+        "title": "Capítulo 18: A Fuga para Çukurova",
+        "duration": "52:10",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 19,
+        "season": 1,
+        "title": "Capítulo 19: A Fuga para Çukurova",
+        "duration": "52:10",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 20,
+        "season": 1,
+        "title": "Capítulo 20: A Fuga para Çukurova",
+        "duration": "52:10",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 21,
+        "season": 1,
+        "title": "Capítulo 21: A Fuga para Çukurova",
+        "duration": "52:10",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 22,
+        "season": 1,
+        "title": "Capítulo 22: A Fuga para Çukurova",
+        "duration": "52:10",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 23,
+        "season": 1,
+        "title": "Capítulo 23: A Fuga para Çukurova",
+        "duration": "52:10",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 24,
+        "season": 1,
+        "title": "Capítulo 24: A Fuga para Çukurova",
+        "duration": "52:10",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 25,
+        "season": 1,
+        "title": "Capítulo 25: A Fuga para Çukurova",
+        "duration": "52:10",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 26,
+        "season": 1,
+        "title": "Capítulo 26: A Fuga para Çukurova",
+        "duration": "52:10",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 27,
+        "season": 1,
+        "title": "Capítulo 27: A Fuga para Çukurova",
+        "duration": "52:10",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 28,
+        "season": 1,
+        "title": "Capítulo 28: A Fuga para Çukurova",
+        "duration": "52:10",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 29,
+        "season": 1,
+        "title": "Capítulo 29: A Fuga para Çukurova",
+        "duration": "52:10",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 30,
+        "season": 1,
+        "title": "Capítulo 30: A Fuga para Çukurova",
+        "duration": "52:10",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 31,
+        "season": 1,
+        "title": "Capítulo 31: A Fuga para Çukurova",
+        "duration": "52:10",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 32,
+        "season": 1,
+        "title": "Capítulo 32: A Fuga para Çukurova",
+        "duration": "52:10",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 33,
+        "season": 1,
+        "title": "Capítulo 33: A Fuga para Çukurova",
+        "duration": "52:10",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 34,
+        "season": 1,
+        "title": "Capítulo 34: A Fuga para Çukurova",
+        "duration": "52:10",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 35,
+        "season": 1,
+        "title": "Capítulo 35: A Fuga para Çukurova",
+        "duration": "52:10",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 36,
+        "season": 2,
+        "title": "Capítulo 36: O Confronto na Mansão Yaman",
+        "duration": "50:40",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 37,
+        "season": 2,
+        "title": "Capítulo 37: O Confronto na Mansão Yaman",
+        "duration": "50:40",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 38,
+        "season": 2,
+        "title": "Capítulo 38: O Confronto na Mansão Yaman",
+        "duration": "50:40",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 39,
+        "season": 2,
+        "title": "Capítulo 39: O Confronto na Mansão Yaman",
+        "duration": "50:40",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 40,
+        "season": 2,
+        "title": "Capítulo 40: O Confronto na Mansão Yaman",
+        "duration": "50:40",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 41,
+        "season": 2,
+        "title": "Capítulo 41: O Confronto na Mansão Yaman",
+        "duration": "50:40",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 42,
+        "season": 2,
+        "title": "Capítulo 42: O Confronto na Mansão Yaman",
+        "duration": "50:40",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 43,
+        "season": 2,
+        "title": "Capítulo 43: O Confronto na Mansão Yaman",
+        "duration": "50:40",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 44,
+        "season": 2,
+        "title": "Capítulo 44: O Confronto na Mansão Yaman",
+        "duration": "50:40",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 45,
+        "season": 2,
+        "title": "Capítulo 45: O Confronto na Mansão Yaman",
+        "duration": "50:40",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 46,
+        "season": 2,
+        "title": "Capítulo 46: O Confronto na Mansão Yaman",
+        "duration": "50:40",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 47,
+        "season": 2,
+        "title": "Capítulo 47: O Confronto na Mansão Yaman",
+        "duration": "50:40",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 48,
+        "season": 2,
+        "title": "Capítulo 48: O Confronto na Mansão Yaman",
+        "duration": "50:40",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 49,
+        "season": 2,
+        "title": "Capítulo 49: O Confronto na Mansão Yaman",
+        "duration": "50:40",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 50,
+        "season": 2,
+        "title": "Capítulo 50: O Confronto na Mansão Yaman",
+        "duration": "50:40",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 51,
+        "season": 2,
+        "title": "Capítulo 51: O Confronto na Mansão Yaman",
+        "duration": "50:40",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 52,
+        "season": 2,
+        "title": "Capítulo 52: O Confronto na Mansão Yaman",
+        "duration": "50:40",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 53,
+        "season": 2,
+        "title": "Capítulo 53: O Confronto na Mansão Yaman",
+        "duration": "50:40",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 54,
+        "season": 2,
+        "title": "Capítulo 54: O Confronto na Mansão Yaman",
+        "duration": "50:40",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 55,
+        "season": 2,
+        "title": "Capítulo 55: O Confronto na Mansão Yaman",
+        "duration": "50:40",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 56,
+        "season": 2,
+        "title": "Capítulo 56: O Confronto na Mansão Yaman",
+        "duration": "50:40",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 57,
+        "season": 2,
+        "title": "Capítulo 57: O Confronto na Mansão Yaman",
+        "duration": "50:40",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 58,
+        "season": 2,
+        "title": "Capítulo 58: O Confronto na Mansão Yaman",
+        "duration": "50:40",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 59,
+        "season": 2,
+        "title": "Capítulo 59: O Confronto na Mansão Yaman",
+        "duration": "50:40",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 60,
+        "season": 2,
+        "title": "Capítulo 60: O Confronto na Mansão Yaman",
+        "duration": "50:40",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 61,
+        "season": 2,
+        "title": "Capítulo 61: O Confronto na Mansão Yaman",
+        "duration": "50:40",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 62,
+        "season": 2,
+        "title": "Capítulo 62: O Confronto na Mansão Yaman",
+        "duration": "50:40",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 63,
+        "season": 2,
+        "title": "Capítulo 63: O Confronto na Mansão Yaman",
+        "duration": "50:40",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 64,
+        "season": 2,
+        "title": "Capítulo 64: O Confronto na Mansão Yaman",
+        "duration": "50:40",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 65,
+        "season": 2,
+        "title": "Capítulo 65: O Confronto na Mansão Yaman",
+        "duration": "50:40",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 66,
+        "season": 2,
+        "title": "Capítulo 66: O Confronto na Mansão Yaman",
+        "duration": "50:40",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 67,
+        "season": 2,
+        "title": "Capítulo 67: O Confronto na Mansão Yaman",
+        "duration": "50:40",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 68,
+        "season": 2,
+        "title": "Capítulo 68: O Confronto na Mansão Yaman",
+        "duration": "50:40",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 69,
+        "season": 2,
+        "title": "Capítulo 69: O Confronto na Mansão Yaman",
+        "duration": "50:40",
+        "videoId": "f954W8xAUhU",
+        "isFree": false
+      },
+      {
+        "num": 70,
+        "season": 2,
+        "title": "Capítulo 70: O Confronto na Mansão Yaman",
+        "duration": "50:40",
+        "videoId": "f954W8xAUhU",
         "isFree": false
       }
     ]
@@ -28162,7 +29334,7 @@ const NOVELAS_CATALOG = [
     "channelUrl": "https://www.youtube.com/results?search_query=O%20Fruto%20Proibido%20%E2%80%94%20A%20Disputa%20pela%20Mans%C3%A3o",
     "category": "turcas",
     "categoryLabel": "Novela Turca Dublada",
-    "badge": "2 TEMPORADAS COMPLETAS 🇹🇷",
+    "badge": "❤️ FENÔMENO NO TIKTOK",
     "isTrending": true,
     "rating": "4.8",
     "views": "4.2M",
@@ -29255,7 +30427,7 @@ const NOVELAS_CATALOG = [
     "channelUrl": "https://www.youtube.com/results?search_query=Serada%20(Sen%20%C3%87al%20Kap%C4%B1m%C4%B1)%20%E2%80%94%20Eda%20Yildiz%20e%20Serkan%20Bolat",
     "category": "turcas",
     "categoryLabel": "Novela Turca Dublada",
-    "badge": "DRAMA APAIXONANTE 🇹🇷",
+    "badge": "AMOR & VINGANÇA 🇹🇷",
     "isTrending": true,
     "rating": "4.9",
     "views": "4.5M",
