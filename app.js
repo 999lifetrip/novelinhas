@@ -383,10 +383,10 @@ function renderTop10Carousel() {
     NOVELAS_CATALOG.find(s => s.id === 'mexicana-1'),
     NOVELAS_CATALOG.find(s => /rebelde/i.test(s.title)) || NOVELAS_CATALOG.find(s => s.id === 'mexicana-2'),
     NOVELAS_CATALOG.find(s => s.id === 'dorama-1'),
-    NOVELAS_CATALOG.find(s => s.id === 'micro-ceo-vinganca-3t') || NOVELAS_CATALOG.find(s => s.id === 'hot-1')
+    NOVELAS_CATALOG.find(s => s.id === 'dorama-alquimia-almas') || NOVELAS_CATALOG.find(s => s.id === 'micro-ceo-vinganca-3t')
   ].filter(Boolean);
 
-  const durations = ['48:30', '52:15', '45:20', '1:04:35', '50:40', '54:20', '48:15', '46:30', '58:40', '25:10'];
+  const durations = ['48:30', '52:15', '45:20', '1:04:35', '50:40', '54:20', '48:15', '46:30', '58:40', '1:12:10'];
 
   const isPosterCover = top10.some(i => i.cover && i.cover.startsWith('covers/'));
   container.innerHTML = top10.map((item, idx) => `
